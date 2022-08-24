@@ -1,0 +1,162 @@
+#box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+#side{
+    margin-left: 130px;
+    margin-top: 30px;
+}
+#side1{
+    border: 1px solid gray;
+    width: 80%;
+    height: 210px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+#side1 img{
+    margin-bottom: 20px;
+}
+#side1 a{
+    margin-bottom: 20px;
+    color: gray;
+    text-decoration: none;
+}
+#side1 a:hover{
+    text-decoration: underline;
+}
+#side2{
+    border: 1px solid gray;
+    width: 80%;
+    height: 230px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+#side2 img{
+    margin-bottom: 20px;
+}
+#side2 a{
+    margin-bottom: 20px;
+    color: gray;
+    text-decoration: none;
+}
+#side2 a:hover{
+    text-decoration: underline;
+}
+#side3{
+    border: 1px solid gray;
+    width: 87.3%;
+    height: 230px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#side3 a{
+    text-decoration: none;
+    color: black;
+}
+#side3 a:hover{
+    text-decoration: underline;
+}
+#side3 h2{
+    text-align: center;
+}
+
+#form{
+    margin-left: 30px;
+  
+    width: 45%;
+    padding: 15px;
+    color: gray;
+    }
+#form h1{
+    color: black;
+}
+#form li{
+    margin-left: 20px;
+}
+#form li a{
+    color: red;
+}
+#form-second h1{
+    margin-top: 60px;
+    color: gray;
+
+}
+#form-second p{
+    margin-top: -15px;
+}
+input{
+    margin-left: 20px;
+    width: 350px;
+    height: 23px;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    font-size: 14px;
+}
+#name{
+    margin-left: 51px;
+}
+#email{
+    margin-left: 88px;
+}
+#email1{
+    margin-left: 25px;
+}
+#password{
+    margin-left: 67px;
+}
+#username{
+    margin-left: 63px;
+}
+#date{
+    margin-left: 60px;
+}
+#Country{
+    margin-left: 70px;
+    width: 150px;
+    height: 30px;
+    margin-bottom: 15px;
+    outline: none;
+   
+}
+#State{
+    margin-left:90px;
+    width: 150px;
+    height: 30px;
+    margin-bottom: 15px;
+    outline: none;
+}
+#Gender{
+    margin-left:75px;
+    width: 150px;
+    height: 30px; 
+    outline: none;
+}
+#btn{
+    padding: 10px;
+    margin-top: 40px;
+    width: 30%;
+    height: 50px;
+    margin-left: 40px;
+    border-radius: 7px;
+    border: 1px solid #f06292;
+    color: white;
+    background-color:#ff4081;
+    font-size: 20px;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color:#d81b60;
+}

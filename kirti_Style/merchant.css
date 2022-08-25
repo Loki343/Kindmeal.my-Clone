@@ -19,7 +19,7 @@
     left: 9px;
     top: 1vh;
     font-size: 3vh;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: red;
     font-weight: bold;
 }
@@ -30,7 +30,7 @@
 }
 #p-tag span{
     font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 a{
     text-decoration: none;
@@ -59,9 +59,6 @@ a:hover{
     left: 12px;
     top: 1vh;
     font-size: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
-    font-weight: bold;
 }
 #p-tag{
    position: relative;
@@ -70,6 +67,5 @@ a:hover{
 }
 span{
     font-size: 10px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 }

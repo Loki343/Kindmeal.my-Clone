@@ -1,5 +1,5 @@
 function navbar() {
-    return `<div id="kau_upper">
+  return `<div id="kau_upper">
     <div>
         <a href="">
             <img src="	https://www.kindmeal.my/images/logo-kindmeal.png" id="kau_logo" alt="">
@@ -16,11 +16,12 @@ function navbar() {
             <img src="	https://www.kindmeal.my/images/follow_twitter_grey.png" id="kau_tw" alt="">
         </a>
     </div>
+
     <div id='showname'>
         <a href="" id="kau_login"><p>Login</p></a>
         <a href="" id="kau_facebook"><button>Facebook</button></a>
         <a href="" id="kau_email"><button>Email</button></a>
-        <a href="" id="kau_signup"><p>Sign up</p></a>
+        <label for="show"><a href="main.html" id="kau_signup">Sign up</a></label>
     </div>
 </div>
 <div id="kau_lower">
@@ -34,4 +35,4 @@ function navbar() {
     <a href="">Help</a>
 </div>`;
 }
-export {navbar};
+export { navbar };

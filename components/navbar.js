@@ -16,8 +16,9 @@ function navbar() {
             <img src="	https://www.kindmeal.my/images/follow_twitter_grey.png" id="kau_tw" alt="">
         </a>
     </div>
-    <div>
-    <label for="show"><a href="login.html" id="kau_login">Login</a></label>
+
+    <div id='showname'>
+        <a href="" id="kau_login"><p>Login</p></a>
         <a href="" id="kau_facebook"><button>Facebook</button></a>
         <a href="" id="kau_email"><button>Email</button></a>
         <label for="show"><a href="main.html" id="kau_signup">Sign up</a></label>

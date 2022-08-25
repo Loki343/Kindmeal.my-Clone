@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="components/navbar.css">
+  <!-- <link rel="stylesheet" href="kau_styles/body.css"> -->
 </head>
 <body>
+    <div id="kau_navbar"></div>arrogant-beef-5673
     <div id="box">
         <div id="side">
             <div id="side1">
                 <img src="https://www.kindmeal.my/images/join_normal.png" alt="Error"><br>
-                <a href="">Food lover Sign Up</a>
+                <a href="signup.html">Food lover Sign Up</a>
             </div>
             <div id="side2">
                 <img src="https://www.kindmeal.my/images/join_shop.png" alt="Error"><br>
-                <a href="">Restaurant Sign Up</a>
+                <a href="signup.html">Restaurant Sign Up</a>
             </div>
             <div id="side3">
                 <h2>Why KindMeal?</h2>
@@ -47,7 +50,7 @@
 
                         <label for="">Your Name </label><input type="text" id="name" placeholder="Enter your Name"><br>
                         <label for="">Email </label><input type="email" id="email" placeholder="Enter email name"><br>
-                        <label for="">Re-Enter Email:</label><input type="email" id="email1" placeholder="Your Email must be correct"><br>
+                        <label for="">Re-Enter Email:</label><input type="email" id="Re_email" placeholder="Your Email must be correct"><br>
                         <label for="">Password</label><input type="password" id="password" placeholder="Enter Password"><br>
                         <label for="">Username</label><input type="text" id="username" placeholder="Enter Username"><br>
                         <label for="">Birth Date</label><input type="date" id="date"><br>
@@ -56,34 +59,18 @@
                             <option value="">Your Country</option>
                             <option value="">India</option>
                             <option value="">Pakistan</option>
-                            <option value="">United State America</option>
-                            <option value="">United Kingdom</option>
+                            <option value="">USA</option>
+                            <option value="">UK</option>
                             <option value="">Malaysia</option>
                             <option value="">Austrelia</option>
                             <option value="">Sri Lanka</option>
                             <option value="">New Zealand</option>
                             <option value="">Germany</option>
                             <option value="">France</option>
-                            <option value="">Afghanistan</option>
-                            <option value="">Albania</option>
-                            <option value="">Belgium</option>
-                            <option value="">Brazil</option>
-                            <option value="">Bhutan </option>
-                            <option value="">Canada</option>
-                            <option value="">China</option>
-                            <option value="">Egypt</option>
-                            <option value="">Greece</option>
-                            <option value="">Iceland</option>
-                            <option value="">Israel</option>
-                            <option value="">Indonesia</option>
-                            <option value="">Iran</option>
-                            <option value="">Thailand</option>
-                            <option value="">Japan</option>
-                            <option value="">Maldives</option>
                         </select><br>
                         <label for="">State</label>
                         <select id="State">
-                            <option value="">State</option>
+                            <option value="">state</option>
                             <option value="">Andhra Pradesh</option>
                             <option value="">Arunachal Pradesh</option>
                             <option value="">Assam</option>
@@ -118,10 +105,73 @@
                             <option value="">Male</option>
                             <option value="">Female</option>
                         </select><br>
-                        <button id="btn">Join Now</button>
+                        <!-- <button id="btn">Join Now</button> -->
+                        <input type="submit"  id="submit" value="Join Now">
             </div>
         </div>
 
     </div>
 </body>
 </html>
+
+<script type="module">
+    let container = document.querySelector('#kau_navbar');
+    import { navbar } from './components/navbar.js'
+    container.innerHTML = navbar();
+
+let userArr = JSON.parse(localStorage.getItem("signup")) || [];
+let Signup = (e) => {
+  e.preventDefault();
+  
+  let name = document.getElementById("name").value;
+
+  let email = document.getElementById("email").value;
+
+  let pass = document.getElementById("password").value;
+
+  if (name == "" || email == "" || pass == "") {
+    alert("Please Fill All Details");
+  } else {
+    class user {
+      password;
+      constructor(n, email) {
+        this.name = n;
+      }
+
+      signup(email, password) {
+        let isvalidated = false;
+
+        isvalidated =
+          this.#validateemail(email) && this.#validatepass(password);
+
+        if (isvalidated) {
+          this.email = email;
+          this.password = password;
+          alert("User Registered successfully");
+          userArr.push(this);
+          localStorage.setItem("signup", JSON.stringify(userArr));
+          window.location.href = "./login.html";
+        } else {
+          alert("please follow username and password rules");
+        }
+      }
+      #validateemail(email) {
+        return true;
+      }
+
+      #validatepass(password) {
+        return true;
+      }
+    }
+    let user1 = new user(name);
+
+    user1.signup(email, pass);
+
+    console.log(user1);
+  }
+};
+
+let form = document.querySelector("form");
+form.addEventListener("submit", Signup);
+
+</script>

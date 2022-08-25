@@ -1,0 +1,99 @@
+#btn1{
+    background-color: red;
+    width: 150px;
+    padding: 8px 8px;
+    border-radius: 5px;
+    color: white;
+    margin-left: 100px;
+ }
+ #btn2{
+    background-color:green;
+    padding: 8px 8px;
+    border-radius: 5px;
+    color: white;
+    margin-left: 150px;
+    width: 180px;
+ }
+ #functionality>select{
+     padding: 5px 5px;
+     font-style: normal;
+     color: gray;
+     
+ }
+ #functionality{
+     margin-left: 220px;
+    
+     
+     
+ }
+ #img1{
+     
+     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+     margin-left: 100px;
+     width: 89%;
+ }
+ #location{
+     margin-left: 50px;
+ }
+ #top{
+     background-color:rgb(226, 221, 221);
+     margin-bottom: 40px;
+     /* border:1px solid red ; */
+     padding:10px 10px;
+  }
+  #heading>h2{
+     margin-left:170px ;
+  }
+  #heading>p{
+     margin-left:170px ;
+     
+  }
+  #food{
+     display: grid;
+     grid-template-columns: repeat(4,1fr);
+     grid-template-rows: auto;
+     gap: 15px;
+     text-align: center;
+     
+  }
+  img{
+     height:200px;
+  }
+  #food>div{
+     height: auto;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  #food>div>p{
+     font-size: 25px;
+     color:gray;
+  }
+  #img2{
+     
+     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+     
+     width: 100%;
+     background-color: rgb(190, 188, 188);
+     margin-top: 30px;
+     padding-top: 15px;
+     padding-bottom: 15px;
+ }
+       
+ 
+ #btnback {
+display: none;
+position: fixed;
+top: 20px;
+right: 50%;
+z-index: 99;
+border: none;
+outline: none;
+background-color: rgb(33, 30, 30);
+cursor:pointer;
+padding: 15px 20px;
+border-radius: 4px;
+font-size: 18px;
+font-weight: 700;
+border-radius: 50px;
+color: white;
+}
+ 

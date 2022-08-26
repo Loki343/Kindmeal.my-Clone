@@ -1,77 +1,106 @@
-/* #kau_navbar{
+/* upper */
+#navbar {
+    border: 1px solid transparent;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
 
-} */
-#kau_upper{
-    height: 90px;
+#navbar1 {
+    width: 75%;
+    border: 1px solid transparent;
+    height: 120px;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    margin-left: 21%;
 }
-#kau_upper>div{
-    display: flex;
+
+#logo{
+    width: 120%;
+    height: 100px;
+    margin-left: -80px;
+    
 }
-#kau_lower{
-    height: 40px;
-    background-color: #2bb673;
-    display: flex;
-    align-items: center;
-    width: 100%;
+
+.eachlink {
+    width: 22%;
+    padding-left: 20px;
+    box-sizing: border-box;
 }
-#kau_lower>a{
-    font-size: 18px;
+
+#login>a,
+#facebook>a,
+#email>a,
+#signup>a {
     text-decoration: none;
-    color: white;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
-#kau_lower>a:nth-child(1){
-    margin-left: 22.5vw;
-}
-#kau_lower>a:nth-child(2){
-    margin-left: 4.3vw;
-}
-#kau_lower>a:nth-child(3),#kau_lower>a:nth-child(4),#kau_lower>a:nth-child(5),#kau_lower>a:nth-child(6),#kau_lower>a:nth-child(7),#kau_lower>a:nth-child(8){
-    margin-left: 3.3vw;
-}
-#kau_link,#kau_tw,#kau_fb{
-    height: 40px;
-}
-#kau_link{
-    margin-left: 10vw;
-}
-#kau_tw,#kau_fb{
-    margin-left: 1vw;
-}
-#kau_login{
-    margin-left: 100px;
-    font-size: 13px;
-    text-decoration: none;
-    color: rgb(55, 55, 55);
-}
-#kau_facebook>button{
-    margin-left: 1.5vw;
-    width: 80px;
+
+#facebook {
     background-color: #35619f;
     border: 0px;
-    color: white;
-    border-radius: 5px;
-    height: 23px;
-    font-weight: 700;
+    border-radius: 3px;
+    height: 30px;
 }
-#kau_email>button{
-    background-color: gray;
+
+#facebook>a {
     color: white;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+#email {
+    background-color: #666;
     border: 0px;
-    width: 80px;
-    height: 23px;
-    border-radius: 5px;
-    margin-left: 15px;
-    font-weight: 700;
+    border-radius: 3px;
+    height: 30px;
 }
-#kau_signup{
-    margin-left: 1.5vw;
-    font-size: 13px;
+
+#loginsignup {
+    display: flex;
+    gap: 15px;
+}
+
+#email>a {
+    color: white;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+#login>a {
+    color: #575150;
+    font-size: 14px;
+}
+
+#signup>a {
+    color: #575150;
+    font-size: 14px;
+    margin-right: 50px;
+}
+
+/* lower */
+#navbar21{
+    border: 1px solid transparent;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #2bb673;
+}
+#navbar2 {
+    width: 75%;
+    border: 1px solid transparent;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navbar2>a{
     text-decoration: none;
-    color: rgb(55, 55, 55);
-    
+
+}
+#navbar2>a>p{
+    color: white;
+    font-size: 20px;
 }

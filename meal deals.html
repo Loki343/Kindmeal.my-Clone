@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <style>
        #btn1{
            background-color: red;
@@ -38,7 +39,10 @@
             
             box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
             margin-left: 100px;
-            width: 89%;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            display: block;
         }
         #location{
             margin-left: 50px;
@@ -57,10 +61,13 @@
             
          }
          #food{
+            width: 60%;
+            margin-left: 20%;
+            margin-right: 20%;
             display: grid;
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(2,1fr);
             grid-template-rows: auto;
-            gap: 15px;
+            gap: 25px;
             text-align: center;
             
          }
@@ -70,6 +77,8 @@
          #food>div{
             height: auto;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 15px;
+            
          }
          #food>div>p{
             font-size: 25px;
@@ -77,13 +86,14 @@
          }
          #img2{
             
-            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
             
-            width: 100%;
-            background-color: rgb(190, 188, 188);
+            
+            width: 75%;
+             height:150px;
             margin-top: 30px;
             padding-top: 15px;
             padding-bottom: 15px;
+            margin-left: 12.5%;
         }
 
         #btnback {
@@ -103,15 +113,38 @@
   border-radius: 50px;
   color: white;
 }
-        
 
-       
+#btn-load {
+  color: black;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 4px;
+}
 
-       
-    </style>
+#btn-load:hover {
+  color: blue;
+  border: 2px solid black;
+} 
+#image2{
+   background-color:#E0E0E0;
+   height: 280px;
+}
+
+
+
+
+
+
+</style>
 </head>
+  
+
 <body>
-    <!-- <div id="main"> -->
+    
         <div id="top">
     <div id="heading">
 
@@ -121,24 +154,24 @@
      <p>Download our <a href="mobile app.html">mobile app</a> now to easily get coupons and start dining in a few seconds. Effortlessly save lives, health, environment and money now!</p>
     </div>
     <div id="functionality">
-        <select name="categories"id="categories">
+        <select name="category"id="categories">
             <option value="">All categories</option>
-            <option value="pa">Pasta</option>
-            <option value="bu">Burger</option>
-            <option value="ch">Chinese</option>
-            <option value="br">Breakfast</option>
-            <option value="sl">Salad</option>
-            <option value="t">Tea</option>
+            <option value="PA">Pasta</option>
+            <option value="BR">Burger</option>
+            <option value="CH">Chinese</option>
+            <option value="BF">Breakfast</option>
+            <option value="SL">Salad</option>
+          
             
             </select>
         
-            <select name=" locations" id="location">
-            <option value="location">All locations</option>
+            <select name="location" id="location">
+            <option value="">All locations</option>
             <option value="MAH">Maharashtra</option>
             <option value="MP">Madhya Pradesh</option>
             <option value="RJ">Rajshtan</option>
             <option value="KN">Karnatak</option>
-            <option value="UP">Uttar pradesh</option>
+            <option value="UP">Uttar Pradesh</option>
         </select>
         <button id="btn1">Search Details</button>
         <button id="btn2">Browse Restaurants</button>
@@ -153,15 +186,16 @@
      <div id="food">
 
      </div>
+     <li><button id="btn-load">Load More</button></li>
      <button onclick="backTop()" id="btnback">
         <i class="fa fa-angle-up"></i>Back to top
     </button>
       
-     <div>
+     <div id="image2">
         <img id="img2" src="https://www.kindmeal.my/images/how_kindmeal_works.png">
      </div>
-    
-    <!-- </div> -->
+     
+
     </body>
 
 </html>

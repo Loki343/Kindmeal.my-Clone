@@ -22,14 +22,14 @@ let foods =[
 
     {
         name:"Pasta",
-        image:"https://5.imimg.com/data5/RB/AS/GLADMIN-43733314/white-sauce-veg-pasta-500x500.png",
+        image:"https://c.ndtvimg.com/2019-08/tfddu9ao_pasta_625x300_13_August_19.jpg",
         Restaurant_name:"Toscano",
         adress:"Jaipur",
         state:"Rajsthan"
     },
     {
         name:"Pasta",
-        image:"https://5.imimg.com/data5/RB/AS/GLADMIN-43733314/white-sauce-veg-pasta-500x500.png",
+        image:"https://5.imimg.com/data5/EA/GP/GLADMIN-43733314/red-sauce-veg-pasta-500x500.png",
         Restaurant_name:" Ristorante Italia",
         adress:"Lucknow",
         state:"Uttar Pradesh"
@@ -99,6 +99,80 @@ let foods =[
     state:"Rajsthan"
 },
 {
+  name:"Chinese",
+  image:"https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2997%2Ftrend20201119134018.jpg",
+  Restaurant_name:" Ristorante Italia",
+  adress:"Lucknow",
+  state:"Uttar Pradesh"
+},
+{
+  name:"Breakfast",
+  image:"https://insanelygoodrecipes.com/wp-content/uploads/2020/05/Italian-Breakfast-Foods.png",
+  Restaurant_name:"Botticino",
+  adress:"Mumbai",
+  state:"Maharashtra"
+},
+{
+  name:"Breakfast",
+  image:"https://assets.gqindia.com/photos/5ee790ec62970f1a2bdba8d6/master/pass/Indian-Breakfast-Recipes.jpg",
+  Restaurant_name:"Chef's Alcove",
+  adress:"Indore",
+  state:"Madhya Pradesh"
+},
+{
+  name:"Breakfast",
+  image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrvDUj2yKh1C9G6Lp3aZIiPgjhoWcLhDbbRAD1fnCIqaKWQj4rJoFLc08SmiJ-KNGifVg&usqp=CAU",
+  Restaurant_name:"The black cafe",
+  adress:"Banglore",
+  state:"Karnatak"
+},
+
+{
+  name:"Breakfast",
+  image:"https://www.eatthis.com/wp-content/uploads/sites/4/2021/06/breakfast-waffles-grits.jpg?quality=82&strip=1",
+  Restaurant_name:"Toscano",
+  adress:"Jaipur",
+  state:"Rajsthan"
+},
+{
+  name:"Breakfast",
+  image:"https://www.thedailymeal.com/sites/default/files/2019/01/18/0-Utah-MAIN2.jpg",
+  Restaurant_name:" Ristorante Italia",
+  adress:"Lucknow",
+  state:"Uttar Pradesh"
+},
+   { 
+       name:"Salad",
+      image:"https://cdn.loveandlemons.com/wp-content/uploads/2021/04/green-salad-500x375.jpg",
+      Restaurant_name:"Botticino",
+      adress:"Mumbai",
+      state:"Maharashtra"
+  },
+
+  {
+      name:"Salad",
+      image:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Salad_platter.jpg/1200px-Salad_platter.jpg",
+      Restaurant_name:"Chef's Alcove",
+      adress:"Indore",
+      state:"Madhya Pradesh"
+  },
+  {
+      name:"Salad",
+      image:"https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/10/7/0/FNK_Greek-Salad_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383814482359.jpeg",
+      Restaurant_name:"The black cafe",
+      adress:"Banglore",
+      state:"Karnatak"
+  },
+
+  {
+      name:"Salad",
+      image:"https://images.lifestyleasia.com/wp-content/uploads/sites/7/2022/03/07110850/salad.jpg",
+      Restaurant_name:"Toscano",
+      adress:"Jaipur",
+      state:"Rajsthan"
+  },
+]
+  let more_foods=[{
     name:"Chinese",
     image:"https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2997%2Ftrend20201119134018.jpg",
     Restaurant_name:" Ristorante Italia",
@@ -171,9 +245,9 @@ let foods =[
         adress:"Jaipur",
         state:"Rajsthan"
     },
-   
-    
 ]
+    
+
 
 localStorage.setItem('foods',JSON.stringify(foods));
 
@@ -207,19 +281,186 @@ function append(data){
 append(foods)
   
 
-let btn2=document.getElementById("btnback");
-window.onscroll=function(){
-  scrollFunction()
+
+
+function append2(more_foods){
+    
+    more_foods.forEach(function(el){
+        let div=document.createElement("div")
+
+      let name=document.createElement("h2")
+      name.innerText=el.name
+      let image=document.createElement("img")
+      image.src=el.image
+      let Restaurant_name=document.createElement("p")
+      
+      Restaurant_name.innerText=`Restaurant:-  ${el.Restaurant_name}`
+
+
+      let adress=document.createElement("h4")
+      adress.innerText=el.adress
+      let state=document.createElement("h4")
+      state.innerText=el.state
+
+      div.append(name,image,Restaurant_name,adress,state)
+    container.append(div)
+    
+      
+    })
+    
+    }
+    
+     let btn1= document.getElementById('btn-load');
+    
+    btn1.addEventListener('click',addData)
+    
+    
+    function addData(){
+      append2(more_foods);
+    }
+
+
+    let btn2=document.getElementById("btnback");
+    window.onscroll=function(){
+      scrollFunction()
+    }
+    function  scrollFunction(){
+      if(document.body.scrollTop>500 || document.documentElement.scrollTop>500){
+        btn2.style.display='block';
+      }else{
+        btn2.style.display='none';
+      }
+    }
+    function backTop(){
+      document.documentElement.scrollTop=0;
+    }
+
+   
+   
+    let state=document.getElementById("location");
+state.addEventListener("change",stateFilter)
+
+function stateFilter(event){
+  let selected=state.value
+
+  if(selected=="MAH"){
+    let filtered=data.filter(function(el){
+
+      return el.state=="Maharashtra"
+      
+
+    })
+    append(filtered)
+
+
+}else if(selected=="MP"){
+        let filtered=data.filter(function(el){
+    
+          return el.state=="Madhya Pradesh"
+          
+    
+        })
+        append(filtered)
+    
+
+
+}else if(selected=="RJ"){
+    let filtered=data.filter(function(el){
+
+      return el.state=="Rajsthan"
+      
+
+    })
+    append(filtered)
+
+
+
 }
-function  scrollFunction(){
-  if(document.body.scrollTop>500 || document.documentElement.scrollTop>500){
-    btn2.style.display='block';
-  }else{
-    btn2.style.display='none';
+else if(selected=="KN"){
+    let filtered=data.filter(function(el){
+
+      return el.state=="Karnatak"
+      
+
+    })
+    append(filtered)
+
+
+
+}
+else if(selected=="UP"){
+    let filtered=data.filter(function(el){
+
+      return el.state=="Uttar Pradesh"
+      
+
+    })
+    append(filtered)
+
+
+
+}
+}
+
+
+
+let category=document.getElementById("categories");
+category.addEventListener("change",foodFilter)
+
+function foodFilter(event){
+  let selected=category.value
+
+  if(selected=="PA"){
+    let filtered=data.filter(function(el){
+
+      return el.category=="Pasta"
+      
+
+    })
+    append(filtered)
+
+  }else if(selected=="BR"){
+    let filtered=data.filter(function(el){
+
+      return el.category=="Burger"
+      
+
+    })
+    append(filtered)
+
   }
-}
-function backTop(){
-  document.documentElement.scrollTop=0;
+  else if(selected=="CH"){
+    let filtered=data.filter(function(el){
+
+      return el.category=="Chinese"
+      
+
+    })
+    append(filtered)
+
+  }
+
+  else if(selected=="BF"){
+    let filtered=data.filter(function(el){
+
+      return el.category=="Breakfast"
+      
+
+    })
+    append(filtered)
+
+  }
+
+  else if(selected=="SL"){
+    let filtered=data.filter(function(el){
+
+      return el.category=="Salad"
+      
+
+    })
+    append(filtered)
+
+  }
 }
 
 

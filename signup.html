@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="components/navbar.css">
   <!-- <link rel="stylesheet" href="kau_styles/body.css"> -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
-    <div id="kau_navbar"></div>arrogant-beef-5673
+    <div id="kau_navbar"></div>
     <div id="box">
         <div id="side">
             <div id="side1">
@@ -44,7 +50,8 @@
                 <li>Get your exclusive Shop Page — <a href="">https://KindMeal.my/YourShopName</a> </li>
                 <p>To support our welfare causes, we offer simple, affordable Premium Plans on a monthly subscription basis, starting from RM 99 only. No deal commissions, no hidden fees. Premium Plan details are available upon signing up.</p>
             </div>
-            <div id="form-second">
+            <form action="">
+              <div id="form-second">
                 <h1>Personal Profile</h1>
                 <p>First, we setup your personal profile, then proceed to configure your shop promotions.</p>
 
@@ -55,7 +62,7 @@
                         <label for="">Username</label><input type="text" id="username" placeholder="Enter Username"><br>
                         <label for="">Birth Date</label><input type="date" id="date"><br>
                         <label for="">Country</label>
-                        <select id="Country">
+                        <select id="country">
                             <option value="">Your Country</option>
                             <option value="">India</option>
                             <option value="">Pakistan</option>
@@ -69,7 +76,7 @@
                             <option value="">France</option>
                         </select><br>
                         <label for="">State</label>
-                        <select id="State">
+                        <select id="state">
                             <option value="">state</option>
                             <option value="">Andhra Pradesh</option>
                             <option value="">Arunachal Pradesh</option>
@@ -100,7 +107,7 @@
                             <option value="">West Bengal</option>
                         </select><br>
                         <label for="">Gender</label>
-                        <select id="Gender">
+                        <select id="gender">
                             <option value="">Gender</option>
                             <option value="">Male</option>
                             <option value="">Female</option>
@@ -108,11 +115,18 @@
                         <!-- <button id="btn">Join Now</button> -->
                         <input type="submit"  id="submit" value="Join Now">
             </div>
+          </form>
         </div>
 
     </div>
-</body>
+    <div id="img_last">
+      <img src="https://www.kindmeal.my/images/how_kindmeal_works.png" alt="Error">
+    </div>
+    
+  </body>
 </html>
+         
+            
 
 <script type="module">
     let container = document.querySelector('#kau_navbar');
@@ -128,6 +142,7 @@ let Signup = (e) => {
   let email = document.getElementById("email").value;
 
   let pass = document.getElementById("password").value;
+  
 
   if (name == "" || email == "" || pass == "") {
     alert("Please Fill All Details");
@@ -174,4 +189,4 @@ let Signup = (e) => {
 let form = document.querySelector("form");
 form.addEventListener("submit", Signup);
 
-</script>
+ </script>

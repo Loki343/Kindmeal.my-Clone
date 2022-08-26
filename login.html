@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="components/navbar.css">
+    <link rel="stylesheet" href="kau_styles/body.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://kit.fontawesome.com/2ecfe8ce03.js"crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+    <div id="kau_navbar"></div>
+    
+    <input type="checkbox" id="show">
+
+    <div id="login">
+      <form action="">
+        <label for="show" class="close-btn"><i class="fa-solid fa-xmark"></i></label>
+        <div id="part">
+            <img src="https://www.kindmeal.my/images/logo-kindmeal.png" alt="Error">
+            <h2>Member Login</h2>
+            <input id="email" type="email" placeholder="Your Email"><br>
+            <input id="password" type="password" placeholder="Your Password"><br>
+            <!-- <button id="btn">Login</button> -->
+            <input type="submit"  id="submit" value="Login">
+        </div>
+        <hr>
+        <div id="face">
+            <button id="btn1"><img src="https://www.kindmeal.my/images/icon_button_fb.png" alt="Error"><p>Login With Facebook</p></button><label id="label"></label> 
+        </div>
+
+        <div id="last">
+            <a href="">Forgot password?</a>
+            <a href="signup.html">Not a Member? Sign up FREE! </a>
+        </div>
+
+      </form>
+        
+    </div>
+</body>
+</html>
+
+<script type="module">
+    let container = document.querySelector('#kau_navbar');
+    import { navbar } from './components/navbar.js'
+    container.innerHTML = navbar();
+</script>
+
+<script>
+    
+
+let logArr=JSON.parse(localStorage.getItem("logdata"))||[]
+ let  userArr=JSON.parse(localStorage.getItem("signup"))
+
+
+let flag = false;
+let login = (e) => {
+  e.preventDefault();
+
+  if(userArr==null){
+    alert('Hey!! Your new user please Sign up First');
+    window.location.href="signup.html"
+}
+  let email = document.getElementById("email").value;
+  let pass = document.getElementById("password").value;
+
+  if(email=="" ||pass==""){
+    alert("Please Fill All Details")
+  }else{
+    userArr.map((ele)=>{
+  class user {
+    password;
+    constructor(n, email) {
+      this.name = n;
+    }
+
+    signup(email, password) {
+        this.email = email;
+        this.password = password;
+      }
+
+      login(email, pass) {
+        if (email == this.email && pass == this.password) {
+          flag = true;
+          logArr.push(this);
+         localStorage.setItem("logdata",JSON.stringify(logArr));
+        } 
+      }
+    
+  }
+  console.log(ele)
+   
+  let user1 = new user(ele.name);
+  user1.signup(ele.email, ele.password);
+  user1.login(email, pass);
+  
+  console.log(user1);
+
+});
+if(flag==true){
+    alert("logged in sucessfully!!");
+    window.location.href="./index.html"
+
+  }else{
+    alert("login failed,Your Data not Found");
+    window.location.href="./signup.html"
+  }
+}
+};
+
+
+let form = document.querySelector("form");
+form.addEventListener("submit", login);
+
+</script>

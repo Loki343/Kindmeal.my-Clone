@@ -263,6 +263,7 @@ function append(data){
       let name=document.createElement("h2")
       name.innerText=el.name
       let image=document.createElement("img")
+      image.setAttribute('class','everyimg');
       image.src=el.image
       let Restaurant_name=document.createElement("p")
       
@@ -290,7 +291,8 @@ function append2(more_foods){
 
       let name=document.createElement("h2")
       name.innerText=el.name
-      let image=document.createElement("img")
+      let image=document.createElement("img");
+      image.setAttribute('class','everyimg');
       image.src=el.image
       let Restaurant_name=document.createElement("p")
       

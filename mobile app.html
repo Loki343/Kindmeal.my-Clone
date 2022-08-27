@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="components/navbar.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="kau_styles/body.css">
     <style>
   
         #main{
@@ -44,6 +47,7 @@
         }
         #apps{
             margin-top: 50px;
+            margin-bottom: 20px;
             height: 100px;
             padding-top:20px;
             background-color: #EBEBEB;
@@ -63,6 +67,9 @@
     </style>
 </head>
 <body>
+    <div id="navbar"></div>
+   <div id="navbar21"></div>
+
     <div id="main">
         <div id="heading">
         <h1>KindMeal Mobile Apps on iOS & Android</h1>
@@ -80,8 +87,29 @@
         <img id="app2"src="https://www.kindmeal.my/images/mobile_download_android.png">
     
     </div>
+
     </div>
+    <div style="padding-top:15px;"id="kau_footer1"></div>
+   <div id="kau_footer2"></div>
 
 
 </body>
 </html>
+<script type="module">
+    import { navbar, navbar1 } from './components/navbar.js';
+ 
+    let cont1 = document.querySelector('#navbar');
+    let cont2 = document.querySelector('#navbar21');
+ 
+    cont1.innerHTML = navbar();
+    cont2.innerHTML = navbar1();
+ 
+    //footer
+    import { footer1, footer2 } from './components/footer.js';
+ 
+    let foot1 = document.querySelector('#kau_footer1');
+    let foot2 = document.querySelector('#kau_footer2');
+ 
+    foot1.innerHTML = footer1();
+    foot2.innerHTML = footer2();
+ </script>

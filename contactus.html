@@ -136,8 +136,21 @@
     foot1.innerHTML = footer1();
     foot2.innerHTML = footer2();
 
-    let loginData = JSON.parse( localStorage.getItem('logdata'))||[];
+    console.log(localStorage.getItem('login'));
+    let loginxxx = localStorage.getItem('login');
+    if(loginxxx==='true'){
+        let loginData = JSON.parse( localStorage.getItem('logdata'))||[];
     document.querySelector('#loginsignup').innerHTML = `<img src = 'https://www.kindmeal.my/images/icon_notice.png'>
 		<p style = 'color: rgb(125, 123, 123);'>${loginData[0].name}</p>
-		<img src = 'https://www.kindmeal.my/images/no_photo_header.png'>`;
+		<img src = 'https://www.kindmeal.my/images/no_photo_header.png'>
+        <button style='color:;background-color:red;border:0px;padding:10px;border-radius:5px;cursor:pointer;font-size:15px' id='logout'>Log Out</button>`;
+    }else if(loginxxx==='false'){
+        
+    }
+
+
+    document.querySelector('#logout').addEventListener('click',function(){
+        localStorage.setItem('login',false);
+        window.location.reload();
+    })
 </script>

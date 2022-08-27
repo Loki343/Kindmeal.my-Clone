@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/* ------------- Outer Container ------------------------------- */
+#footer-container{
+    
+}
+#contactUs-form-outlet {
+    position: relative;
+    left: 20px;
+    width: 122vh;
+    height: 130vh;
+    margin-top: 3%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 3% 3% 3% 3%;
+}
+
+.form-head {
+    text-align: center;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin-bottom: 15px
+}
+
+/* -------------------- form top sentence -------------- */
+
+.statement {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.table-content {
+    text-align: left;
+    color: #444444;
+    font-size: 18px;
+}
+/* -----------------Submit Button ---------------------------- */
+
+#button_red {
+    width: 250px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    height: 50px;
+    line-height: 30px;
+    background-color: #F53838;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 8px;
+}
+
+#button_red:hover {
+    background-color: #d41f1f;
+    cursor: pointer;
+}
+
+td {
+    margin-top: 2px;
+}
+
+#contact_form {
+    display: inline;
+    width: 85%;
+    margin: auto;
+    display: block;
+    margin-top: -60px;
+    padding: 50px;
+   
+}
+.ww_form_text {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    color: #666666;
+    padding: 3px 10px 3px 10px;
+    height: 40px;
+    width: 400px;
+    margin-top: 4%;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.ww_form_text:disabled {
+    background-color: #f0f0f0;
+}
+
+.ww_text {
+    font-size: 14px;
+}
+
+.ww_text_notice {
+    font-size: 12px;
+    color: #888888;
+    margin-bottom: 5px;
+}
+
+/* -------------------------Labels-------------------------- */
+.label {
+    font-size: 18px;
+    position: relative;
+    top: 15px;
+    font-weight: 600;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.label1 {
+    position: relative;
+    top: 30px;
+    font-size: 18px;
+    position: relative;
+    font-weight: 600;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.ver-label {
+    position: relative;
+    top: 10px;
+}
+ 
+/*------------------------ Recapcha ----------------------------*/
+.recapcha {
+    position: relative;
+    top: 20px;
+}

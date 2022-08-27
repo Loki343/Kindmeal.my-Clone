@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./kirti_Style/general.css" />
+    <link rel="stylesheet" href="components/footer.css">
+    <title>Directory Page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+      }
+
+      #veg-res-content {
+        width: 100%;
+        height: 34vh;
+        padding-top: 20px;
+        background-color: #f0f0f0;
+      }
+
+      h1 {
+        position: relative;
+        left: 14.6%;
+        font-weight: 100;
+        color: #444444;
+      }
+
+      .veg-details {
+        position: relative;
+        left: 14.6%;
+        line-height: 35px;
+        letter-spacing: 0.1px;
+      }
+
+      a {
+        color: #2192fb;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      #form {
+        display: flex;
+        gap: 60px;
+        position: relative;
+        bottom: 50px;
+        left: 14.6%;
+      }
+
+      input {
+        width: 18%;
+        height: 37px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 5px;
+        border: none;
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+      #allshop {
+        width: 15%;
+        height: 37px;
+        padding-left: 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 14px;
+        color: gray;
+      }
+
+      .searchbtn {
+        text-align: center;
+        width: 12%;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #f53838;
+        color: white;
+      }
+
+      .searchbtn:hover {
+        background-color: #d41f1f;
+        cursor: pointer;
+      }
+
+      #addshop {
+        width: 12%;
+        text-align: center;
+        width: 12%;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        position: relative;
+        border: none;
+        background-color: #04be5a;
+        color: white;
+        left: 3%;
+      }
+
+      #addshop:hover {
+        background-color: #009d48;
+        cursor: pointer;
+      }
+
+      #btn-section {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        height: 10vh;
+        margin-top: 2%;
+      }
+
+      .inline-btn {
+        position: relative;
+        left: 6%;
+        width: 220px;
+        height: 40px;
+        padding: 8px 10px 8px 10px;
+        border: 1px solid #d8d8d8;
+        font-size: 14px;
+        border-radius: 5px;
+        text-align: center;
+        color: gray;
+        font-weight: normal;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .inline-btn:hover {
+        background-color: #2bb673;
+        color: white;
+      }
+
+      #map-container {
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 800px;
+        gap: 30px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      #map-container > div {
+        border-radius: 8px;
+        padding: 30px;
+        padding-bottom: 20px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      }
+
+      .maps-location > h1 {
+        position: relative;
+        left: 5px;
+        font-size: 25px;
+        text-align: left;
+      }
+
+      .mapouter {
+        position: relative;
+        bottom: 40px;
+        height: 100px;
+        width: 300px;
+      }
+
+      #gmap_canvas {
+        width: 450px;
+        height: 30vh;
+        overflow: hidden;
+        background: none !important;
+        border-radius: 15px 0px 0px 0px;
+      }
+
+      .links {
+        width: 100%;
+        display: flex;
+        gap: 80px;
+      }
+
+      .links > p {
+        font-size: 16px;
+      }
+      #pagination-button {
+        position: relative;
+        left: 14.6%;
+        top: 10px;
+      }
+      .label-page{
+        font-size: 14px;
+        color: #555555;
+      }
+      .all-btn {
+        border: none;
+        background-color: white;
+        margin-left: 10px;
+        color: #7784FF;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      .all-btn:hover{
+        text-decoration: underline;
+      }
+      .next{
+        width: 90px;
+        height: 33px;
+        border: none;
+        position: relative;
+        left: 47%;
+        color: #555555;
+        border-radius: 8px;
+        background-color: #E8E8E8;
+        cursor: pointer;
+      }
+      .next:hover{
+        background-color: #d8d8d8;
+      }
+      #pagination-button-2{
+        position: relative;
+        left: 14.6%;
+      }
+      #kau_footer1{
+        height: 380px;
+        margin-top: 30px;
+        padding-top: 20px;
+      }
+     #kau_footer2{
+      height: 60px;
+     }
+    </style>
+  </head>
+
+  <body>
+    <nav id="navbar"></nav>
+    <menu id="menubar"></menu>
+    <div id="veg-res-content">
+      <h1>Vegetarian Restaurants In Malaysia</h1>
+      <p class="veg-details">
+        Looking for even more delicious choices? Explore hundreds of vegetarian
+        and vegan restaurants in Malaysia.
+        <br />
+        Are you a restaurant or cafe owner? Boost your business with an
+        attractive KindMeal profile and deals for FREE.
+        <a href="">Find out more</a> or
+        <a href=""><a href="./contactus.html">contact us</a></a> now.
+      </p>
+
+      <form id="form">
+        <input class="search" type="text" placeholder="Search Shop Name" />
+        <select name="" id="allshop">
+          <option value="">All Shop in India</option>
+          <option value="">Maharastra</option>
+          <option value="">Goa</option>
+          <option value="">Lucknow</option>
+          <option value="">West Bengal</option>
+          <option value="">Gujrat</option>
+          <option value="">Jammu & Kashmir</option>
+        </select>
+        <input class="searchbtn" type="submit" value="Search Shops" />
+        <button id="addshop">Add A Shop</button>
+      </form>
+    </div>
+
+    <div id="btn-section">
+      <button class="inline-btn">Vegetarian Directory</button>
+      <button class="inline-btn">Featured Restaurants</button>
+      <button class="inline-btn">Food Menu</button>
+      <button class="inline-btn">Food Map</button>
+    </div>
+
+    <div id="pagination-button">
+      <span class="label-page">Page:</span>
+      <button class="all-btn">1</button>
+      <button class="all-btn">2</button>
+      <button class="all-btn">3</button>
+      <button class="all-btn">4</button>
+      <button class="all-btn">5</button>
+      <button class="all-btn">6</button>
+      <button class="all-btn">7</button>
+      <button class="all-btn">8</button>
+      <button class="all-btn">9</button>
+      <button class="all-btn">10</button>
+      <button class="next">Next »</button>
+    </div>
+
+    <div id="map-container">
+      <div class="maps-location">
+        <h1>AENON The Health Kitchen</h1>
+        <br />
+        <p>
+          AENON Health Kitchen, a hygienic restaurant that provides simple,
+          palatable, wholesome & healthy food at affordable prices. We are
+          dedicated in offering an extraordinary dining experience and providing
+          consumers the opportunity to learn on healthy lifestyle. Health is a
+          choice, not a chance!
+          爱能健康厨房是一间讲究卫生的餐馆，以实惠的价格提供顾客简单、美味以及全面的营养食物。
+          务必让顾客体验别开生面的用餐享受，并给与顾客们有机会去学习健康生活。
+          健康是一种选择，不是机遇!
+        </p>
+        <hr />
+        <p>
+          <b>Address</b><br />
+          1, Jalan 4/93, Taman Miharja, Jalan Cheras, 55200 Kuala Lumpur,
+          Wilayah Persekutuan
+          <br /><br />
+          <b>Phone</b><br />
+          03 - 9201 0972
+          <br /><br />
+          <b>Opening Hours</b><br />
+          Sun - Thu: 11am - 3pm & 6pm - 9pm; Fri - Sat: Closed<br /><br />
+        </p>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="497"
+              height="258"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=Wilayah%20Persekutuan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            >
+            </iframe
+            ><br />
+          </div>
+        </div>
+        <br /><br /><br /><br /><br />
+        <div class="links">
+          <p><a href="#">Visit Website</a></p>
+          <p><a href="#">Get Direction</a></p>
+          <p><a href="#">Nearby Shops</a></p>
+        </div>
+      </div>
+
+      <div class="maps-location">
+        <h1>Alam N-Ion</h1>
+        <br />
+        <p>
+          We serve delicious home-cooked vegetarian meals, crafted with the
+          healthiest ingredients and plenty of love. We also sell natural,
+          handmade clay and wooden Buddhist crafts, health supplements, and
+          homemade beauty products.
+        </p>
+        <hr />
+        <p>
+          <b>Address</b><br />
+          15, Jalan 12/144A, Taman Bukit Cheras , 56000 Kuala Lumpur, Wilayah
+          Persekutuan
+          <br /><br />
+          <b>Phone</b><br />
+          03 - 19-275 9973
+          <br /><br />
+          <b>Opening Hours</b><br />
+          Fri - Wed: 9am - 4pm; Thu: Closed<br /><br />
+        </p>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="497"
+              height="258"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=Wilayah%20Persekutuan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            >
+            </iframe
+            ><br />
+          </div>
+        </div>
+        <br /><br /><br /><br /><br />
+        <div class="links">
+          <p><a href="#">Visit Website</a></p>
+          <p><a href="#">Get Direction</a></p>
+          <p><a href="#">Nearby Shops</a></p>
+        </div>
+      </div>
+
+      <div class="maps-location">
+        <h1>Annalakshmi Vegetarian Restaurant</h1>
+        <br />
+        <p>
+          <b>Address</b><br />
+          114-116, Jalan Berhala, Brickfields, Kuala Lumpur, 50470, Wilayah
+          Persekutuan
+          <br /><br />
+          <b>Phone</b><br />
+          03-22723799, 03-22843799
+          <br /><br />
+          <b>Opening Hours</b><br />
+          Tue-Sun 11am-3pm, 6:30-10pm.<br /><br />
+        </p>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="497"
+              height="258"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=Wilayah%20Persekutuan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            >
+            </iframe
+            ><br />
+          </div>
+        </div>
+        <br /><br /><br /><br /><br />
+        <div class="links">
+          <p><a href="#">Visit Website</a></p>
+          <p><a href="#">Get Direction</a></p>
+          <p><a href="#">Nearby Shops</a></p>
+        </div>
+      </div>
+
+      <div class="maps-location">
+        <h1>Ba Xian Vegetarian Court</h1>
+        <br />
+        <p>
+          <b>Address</b><br />
+          12,14,14-1, Persiaran Mergatua, Kepong Baru, Kuala Lumpur, 52100,
+          Wilayah Persekutuan
+          <br /><br />
+          <b>Phone</b><br />
+          033-62778052
+          <br /><br />
+          <b>Opening Hours</b><br />
+          Daily 10am-10pm.<br /><br />
+        </p>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="497"
+              height="258"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=Wilayah%20Persekutuan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            >
+            </iframe
+            ><br />
+          </div>
+        </div>
+        <br /><br /><br /><br /><br />
+        <div class="links">
+          <p><a href="#">Visit Website</a></p>
+          <p><a href="#">Get Direction</a></p>
+          <p><a href="#">Nearby Shops</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="pagination-button-2">
+      <span class="label-page">Page:</span>
+      <button class="all-btn">1</button>
+      <button class="all-btn">2</button>
+      <button class="all-btn">3</button>
+      <button class="all-btn">4</button>
+      <button class="all-btn">5</button>
+      <button class="all-btn">6</button>
+      <button class="all-btn">7</button>
+      <button class="all-btn">8</button>
+      <button class="all-btn">9</button>
+      <button class="all-btn">10</button>
+      <button class="next">Next »</button>
+    </div>
+
+    <div id="kau_footer1"></div>
+    <div id="kau_footer2"></div>
+
+  </body>
+</html>
+<script src="./kirti_Script/directory.js" type="module"></script>
+
+<script type="module">
+  import { footer1, footer2 } from './components/footer.js';
+
+let foot1 = document.querySelector('#kau_footer1');
+let foot2 = document.querySelector('#kau_footer2');
+
+foot1.innerHTML = footer1();
+foot2.innerHTML = footer2();
+</script>
+
+

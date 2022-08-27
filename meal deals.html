@@ -1,168 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-       #btn1{
-           background-color: red;
-           width: 150px;
-           padding: 8px 8px;
-           border-radius: 5px;
-           color: white;
-           margin-left: 100px;
-        }
-        #btn2{
-           background-color:green;
-           padding: 8px 8px;
-           border-radius: 5px;
-           color: white;
-           margin-left: 150px;
-           width: 180px;
-        }
-        #functionality>select{
-            padding: 5px 5px;
-            font-style: normal;
-            color: gray;
-            
-        }
-        #functionality{
-            margin-left: 220px;
-           
-            
-            
-        }
-        #img1{
-            
-            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-            margin-left: 100px;
-            width: 89%;
-        }
-        #location{
-            margin-left: 50px;
-        }
-        #top{
-            background-color:rgb(226, 221, 221);
-            margin-bottom: 40px;
-            /* border:1px solid red ; */
-            padding:10px 10px;
-         }
-         #heading>h2{
-            margin-left:170px ;
-         }
-         #heading>p{
-            margin-left:170px ;
-            
-         }
-         #food{
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            grid-template-rows: auto;
-            gap: 15px;
-            text-align: center;
-            
-         }
-         img{
-            height:200px;
-         }
-         #food>div{
-            height: auto;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-         }
-         #food>div>p{
-            font-size: 25px;
-            color:gray;
-         }
-         #img2{
-            
-            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-            
-            width: 100%;
-            background-color: rgb(190, 188, 188);
-            margin-top: 30px;
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="components/navbar.css">
+   <link rel="stylesheet" href="components/footer.css">
+   <link rel="stylesheet" href="kau_styles/body.css">
 
-        #btnback {
-  display: none;
-  position: fixed;
-  top: 20px;
-  right: 50%;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: rgb(33, 30, 30);
-  cursor: pointer;
-  padding: 15px 20px;
-  border-radius: 4px;
-  font-size: 18px;
-  font-weight: 700;
-  border-radius: 50px;
-  color: white;
-}
-        
 
-       
 
-       
-    </style>
+
+
+   <style>
+      * {
+         margin: 0px;
+         padding: opx;
+         box-sizing: border-box;
+         font-family: 'Roboto', Arial, Helvetica, sans-serif;
+
+      }
+
+      #btn1 {
+         background-color: red;
+         width: 200px;
+         padding: 8px 8px;
+         border-radius: 5px;
+         color: white;
+         margin-left: 100px;
+         border: none;
+         font-size: 17px;
+      }
+
+      #btn2 {
+         background-color: green;
+         padding: 8px 8px;
+         border-radius: 5px;
+         width: 200px;
+         color: white;
+         margin-left: 100px;
+         width: 180px;
+         border: none;
+         font-size: 17px;
+      }
+
+      #functionality>select {
+         padding: 5px 5px;
+         width: 230px;
+         font-style: normal;
+         font-size: 17px;
+         color: gray;
+         border-radius: 5px;
+
+      }
+
+      #functionality {
+         margin-left: 190px;
+
+
+
+      }
+
+      #img1 {
+
+         /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+         margin-left: 100px;
+         width: 80%;
+         margin-left: 10%;
+         margin-right: 10%;
+         display: block;
+         background-color: #F0F0F0;
+      }
+
+      #location {
+         margin-left: 50px;
+      }
+
+      #top {
+         background-color: #F0F0F0;
+         margin-bottom: 40px;
+         height: 280px;
+         padding-top: 15px;
+         
+
+
+      }
+
+      #heading>h2 {
+         margin-left: 170px;
+         /* font-family: ; */
+         font-weight: lighter;
+         font-size: 30px;
+
+
+
+      }
+
+      #heading>p {
+         margin-left: 170px;
+         font-size: 15px;
+         line-height: 30px;
+
+
+      }
+
+      #food {
+         width: 70%;
+         margin: auto;
+
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: auto;
+         gap: 25px;
+         text-align: center;
+
+      }
+
+      .everyimg {
+         height: 290px;
+         width: 100%;
+         margin-top: 8px;
+
+      }
+
+      #food {
+         margin-top: 30px;
+      }
+
+      #food>div {
+         height: 460px;
+         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+         border-radius: 15px;
+         padding: 15px 0px 15px 0px;
+      
+         /* padding: 15px; */
+
+      }
+
+      #food>div>p {
+         font-size: 25px;
+         color: gray;
+         margin-top: 16px;
+      }
+
+      #food>div>h4 {
+         margin-top: 10px;
+      }
+
+      #img2 {
+
+
+
+         width: 75%;
+         height: 1 50px;
+         margin-top: 30px;
+         padding-top: 15px;
+         padding-bottom: 15px;
+         margin-left: 12.5%;
+      }
+
+      #btnback {
+         display: none;
+         position: fixed;
+         top: 20px;
+         right: 50%;
+         z-index: 99;
+         border: none;
+         outline: none;
+         background-color: rgb(33, 30, 30);
+         cursor: pointer;
+         padding: 15px 20px;
+         border-radius: 4px;
+         font-size: 18px;
+         font-weight: 700;
+         border-radius: 50px;
+         color: white;
+      }
+
+      #btn-load {
+         color: black;
+         cursor: pointer;
+         margin: 20px auto;
+         display: block;
+         font-size: 20px;
+         padding: 10px;
+         background-color: transparent;
+         border-radius: 4px;
+         width: 150px;
+      }
+
+      #btn-load:hover {
+         color: blue;
+         border: 2px solid black;
+      }
+
+      #image2 {
+         background-color: #E0E0E0;
+         height: 300px;
+      }
+   </style>
 </head>
-<body>
-    <!-- <div id="main"> -->
-        <div id="top">
-    <div id="heading">
 
-    <h2>Meat-free deals  |  Restaurants In India</h2>
-    
-    <p>Browse delicious meat-free, vegetarian deals from top restaurants and cafes! Just click on "Get Free Coupon" to obtain instant discounts and dine at the restaurants. </br>No upfront payment, booking or printing is needed. If you share it on social media, you'll even DOUBLE your discount!</p>
-     <p>Download our <a href="mobile app.html">mobile app</a> now to easily get coupons and start dining in a few seconds. Effortlessly save lives, health, environment and money now!</p>
-    </div>
-    <div id="functionality">
-        <select name="categories"id="categories">
-            <option value="">All categories</option>
-            <option value="pa">Pasta</option>
-            <option value="bu">Burger</option>
-            <option value="ch">Chinese</option>
-            <option value="br">Breakfast</option>
-            <option value="sl">Salad</option>
-            <option value="t">Tea</option>
-            
-            </select>
-        
-            <select name=" locations" id="location">
-            <option value="location">All locations</option>
+
+<body>
+
+   <div id="navbar"></div>
+   <div id="navbar21"></div>
+
+
+   <div id="top">
+      <div id="heading">
+
+         <h2>Meat-free deals | Restaurants In India</h2><br>
+
+         <p>Browse delicious meat-free, vegetarian deals from top restaurants and cafes! Just click on "Get Free Coupon"
+            to obtain instant discounts and dine at the restaurants. <br>No upfront payment, booking or printing is
+            needed. If you share it on social media, you'll even DOUBLE your discount!</p>
+         <p>Download our <a href="mobile app.html">mobile app</a> now to easily get coupons and start dining in a few
+            seconds. Effortlessly save lives, health, environment and money now!</p><br><br>
+      </div>
+      <div id="functionality">
+         <select name="category" id="categories">
+            <option value="">All Categories</option>
+            <option value="PA">Pasta</option>
+            <option value="BR">Burger</option>
+            <option value="CH">Chinese</option>
+            <option value="BF">Breakfast</option>
+            <option value="SL">Salad</option>
+
+
+         </select>
+
+         <select name="location" id="location">
+            <option value="">All Locations</option>
             <option value="MAH">Maharashtra</option>
             <option value="MP">Madhya Pradesh</option>
             <option value="RJ">Rajshtan</option>
             <option value="KN">Karnatak</option>
-            <option value="UP">Uttar pradesh</option>
-        </select>
-        <button id="btn1">Search Details</button>
-        <button id="btn2">Browse Restaurants</button>
-    </div>
-    </div>
-      
-    <div>
-        <img id="img1" src="https://www.kindmeal.my/images/banner_directory.jpg">
-     </div>
-     
-     
-     <div id="food">
+            <option value="UP">Uttar Pradesh</option>
+         </select>
+         <button id="btn1">Search Details</button>
+         <button id="btn2">Browse Restaurants</button>
+      </div>
+   </div>
 
-     </div>
-     <button onclick="backTop()" id="btnback">
-        <i class="fa fa-angle-up"></i>Back to top
-    </button>
-      
-     <div>
-        <img id="img2" src="https://www.kindmeal.my/images/how_kindmeal_works.png">
-     </div>
-    
-    <!-- </div> -->
-    </body>
+   <div>
+      <img  id="img1" src="https://www.kindmeal.my/images/banner_directory.jpg">
+   </div>
+
+
+   <div id="food">
+
+   </div>
+   <li><button id="btn-load">Load More</button></li>
+   <button onclick="backTop()" id="btnback">
+      <i class="fa fa-angle-up"></i>Back to top
+   </button>
+
+   <div id="image2">
+      <img id="img2" style="width: 68%;position: relative ;left: 50px;" src="https://www.kindmeal.my/images/how_kindmeal_works.png">
+   </div>
+
+   <div style="padding-top:10px;"id="kau_footer1"></div>
+   <div id="kau_footer2"></div>
+
+</body>
 
 </html>
 <script src="meal deals.js"></script>
+<script type="module">
+   import { navbar, navbar1 } from './components/navbar.js';
+
+   let cont1 = document.querySelector('#navbar');
+   let cont2 = document.querySelector('#navbar21');
+
+   cont1.innerHTML = navbar();
+   cont2.innerHTML = navbar1();
+
+   //footer
+   import { footer1, footer2 } from './components/footer.js';
+
+   let foot1 = document.querySelector('#kau_footer1');
+   let foot2 = document.querySelector('#kau_footer2');
+
+   foot1.innerHTML = footer1();
+   foot2.innerHTML = footer2();
+</script>

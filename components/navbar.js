@@ -19,13 +19,13 @@ function navbar(){
 }
 function navbar1(){
     return `<div id="navbar2">
-    <a href=""><p>Home</p></a>
-    <a href=""><p>Meal Deals</p></a>
+    <a href="index.html"><p>Home</p></a>
+    <a href="meal deals.html"><p>Meal Deals</p></a>
     <a href=""><p>KindMoments</p></a>
     <a href=""><p>Hot Picks</p></a>
     <a href=""><p>Recipies</p></a>
     <a href=""><p>Directory</p></a>
-    <a href=""><p>Articles</p></a>
+    <a href="articles.html"><p>Articles</p></a>
     <a href=""><p>Help</p></a>
 </div>`;
 }

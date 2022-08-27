@@ -23,14 +23,14 @@ let navbar = ()=>{
 
 let menubar = ()=>{
     return ` <div class="pages">
-    <p>Home</p>
-    <p>Meal Deals</p>
+    <p><a href="index.html">Home</a></p>
+    <p><a href="meal deals.html">Meal Deals</a></p>
     <p>KindMoments</p>
     <p>Hot Picks</p>
-    <p>Recipes</p>
-    <p>Directory</p>
-    <p>Articles</p>
-    <p>Help</p>
+    <p><a href="recipe.html">Recipes</a></p>
+    <p><a href="directory.html">Directory</a></p>
+    <p><a href="articles.html">Articles</a></p>
+    <p><a href="general_page.html">Help</a></p>
 </div>`
 }
 

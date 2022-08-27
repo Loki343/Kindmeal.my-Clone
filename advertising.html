@@ -8,6 +8,17 @@
     <title>Advertising Page</title>
     <link rel="stylesheet" href="./kirti_Style/general.css">
     <link rel="stylesheet" href="./kirti_Style/advertising.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <style>
+        #kau_footer1{
+        height: 380px;
+        margin-top: 30px;
+        padding-top: 20px;
+      }
+        #kau_footer2{
+        height: 60px;
+        }
+    </style>
 </head>
 
 <body>
@@ -64,7 +75,20 @@
             <p id="above-btn">We'd love to hear more about your advertising needs.</p>
             <button id="get-in-touch"><a href="./contactus.html">Get In Touch</a></button>
         </div>
+</div>
+        <div id="kau_footer1"></div>
+        <div id="kau_footer2"></div>
 </body>
 
 </html>
 <script src="./kirti_Script/advertising.js" type="module"></script>
+
+<script type="module">
+    import { footer1, footer2 } from './components/footer.js';
+  
+  let foot1 = document.querySelector('#kau_footer1');
+  let foot2 = document.querySelector('#kau_footer2');
+  
+  foot1.innerHTML = footer1();
+  foot2.innerHTML = footer2();
+  </script>

@@ -6,7 +6,9 @@
 }
 
 /* ------------- Outer Container ------------------------------- */
-
+#footer-container{
+    
+}
 #contactUs-form-outlet {
     position: relative;
     left: 20px;

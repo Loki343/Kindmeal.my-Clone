@@ -6,9 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About KindMeal Page</title>
     <link rel="stylesheet" href="./kirti_Style/general.css" />
+    <link rel="stylesheet" href="components/footer.css">
     <style>
       #content-section {
         height: auto;
+      }
+
+      #kau_footer1{
+      height: 380px;
+      margin-top: 30px;
+      padding-top: 20px;
+    }
+      #kau_footer2{
+      height: 60px;
       }
 
       @media all and (min-width: 420px) and (max-width: 900px) {
@@ -253,6 +263,21 @@
         </div>
       </div>
     </div>
+
+    <div id="kau_footer1"></div>
+    <div id="kau_footer2"></div>
   </body>
 </html>
 <script src="./kirti_Script/aboutKindmeal.js" type="module"></script>
+
+
+<script type="module">
+  import { footer1, footer2 } from './components/footer.js';
+
+let foot1 = document.querySelector('#kau_footer1');
+let foot2 = document.querySelector('#kau_footer2');
+
+foot1.innerHTML = footer1();
+foot2.innerHTML = footer2();
+
+</script>

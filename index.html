@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <h1 id="name343"></h1>
     <div id="navbar"></div>
     <div id="navbar21"></div>
     <div id="kau_background">
@@ -278,24 +279,24 @@
     <div id="foursection">
         <div id="foursection1">
             <div style="font-family: 'Roboto', Arial, Helvetica, sans-serif;color: rgb(85, 83, 83);">
-                <img src="https://www.kindmeal.my/images/intro_deal.png" alt="">
+                <img style="width:60%;" src="https://www.kindmeal.my/images/intro_deal.png" alt="">
                 <h3 style="text-align: center;margin-top: 10px;font-weight: normal;">Get Great Deals</h3>
                 <p style="text-align: center;font-size: 14px;">Show our FREE digital coupons to instantly enjoy exciting
                     deals</p>
             </div>
             <div style="font-family: 'Roboto', Arial, Helvetica, sans-serif;color: rgb(85, 83, 83);">
-                <img src="https://www.kindmeal.my/images/intro_kindmoment.png" alt="">
+                <img style="width:60%;" src="https://www.kindmeal.my/images/intro_kindmoment.png" alt="">
                 <h3 style="text-align: center;margin-top: 10px;font-weight: normal">Share KindMoments</h3>
                 <p style="text-align: center;font-size: 14px;">Spread the joy by sharing your yummy dining moments</p>
             </div>
             <div style="font-family: 'Roboto', Arial, Helvetica, sans-serif;color: rgb(85, 83, 83);">
-                <img src="https://www.kindmeal.my/images/intro_menu.png" alt="">
+                <img style="width:60%;" src="https://www.kindmeal.my/images/intro_menu.png" alt="">
                 <h3 style="text-align: center;margin-top: 10px;font-weight: normal">Discover Delicious Food</h3>
                 <p style="text-align: center;font-size: 14px;">Explore the latest exquisite offerings and creative menus
                 </p>
             </div>
             <div style="font-family: 'Roboto', Arial, Helvetica, sans-serif;color: rgb(85, 83, 83);">
-                <img src="https://www.kindmeal.my/images/intro_friends.png" alt="">
+                <img style="width:60%;" src="https://www.kindmeal.my/images/intro_friends.png" alt="">
                 <h3 style="text-align: center;margin-top: 10px;font-weight: normal">Meet Food Lovers</h3>
                 <p style="text-align: center;font-size: 14px;">Make new, compassionate friends and share great food tips
                 </p>
@@ -318,7 +319,7 @@
     <div style="display: flex;justify-content: center">
         <div style="width: 75%;display: flex;justify-content: center;">
             <button id="kau_btn">
-                <p>Join KindMeal Now</p>
+                <p><a style="text-decoration:none; color: white;" href="signup.html">Join KindMeal Now</a></p>
                 <p>Your tasty journy begans here</p>
             </button>
         </div>
@@ -368,6 +369,10 @@
     foot1.innerHTML = footer1();
     foot2.innerHTML = footer2();
 
+    let loginData = JSON.parse( localStorage.getItem('logdata'))||[];
+    document.querySelector('#loginsignup').innerHTML = `<img src = ''>
+		<h3>${loginData[0].name}</h3>
+		<img src = ''>` ;
 </script>
 
 <script>

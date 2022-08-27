@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="components/navbar.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="kau_styles/body.css">
 </head>
 
 <body>
@@ -18,11 +21,6 @@
 
         }
 
-        /* #main{
-            width: 100%;
-            adding: 20px 20px 20px 20px ; 
-        /* } padding: 30px;
-            p*/
         #content>h1 {
             position: relative;
             left: 14.6%;
@@ -31,7 +29,7 @@
         #content>p {
             position: relative;
             left: 14.6%;
-            line-height: 30px;
+            line-height: 25px;
         }
 
         #content {
@@ -41,8 +39,6 @@
             margin-bottom: 10px;
             color: #444444;
             background-color: rgb(240, 240, 240);
-            /* margin: 40px; */
-            /* width: 80%; */
             margin: auto;
         }
 
@@ -51,7 +47,7 @@
             height: 35px;
             position: relative;
             left: 14.6%;
-            top: 20%;
+            top: 10%;
             border-radius: 5px;
             border: none;
             padding-left: 5px;
@@ -63,9 +59,8 @@
             margin-left: 30px;
             position: relative;
             left: 14.6%;
-            top: 20%;
+            top: 10%;
             border-radius: 5px;
-
         }
 
         #btn1 {
@@ -74,16 +69,14 @@
             margin-left: 30px;
             background-color: rgb(245, 56, 56);
             color: white;
-            font-size: 10px;
+            font-size: 14px;
             border-radius: 8px;
             border: none;
             position: relative;
             left: 14.6%;
-            top: 20%;
+            top: 10%;
             border-radius: 5px;
-
-
-
+            cursor: pointer;
         }
 
         #btn2 {
@@ -92,39 +85,45 @@
             margin-left: 7%;
             background-color: rgb(4, 190, 90);
             color: white;
-            font-size: 10px;
+            font-size: 14px;
             border-radius: 8px;
             border: none;
             position: relative;
-            left: 14.6%;
-            top: 20%;
+            left: 11%;
+            top: 10%;
             border-radius: 5px;
-
-
+            cursor: pointer;
         }
 
         #buttons {
-            width: 90%;
-            /* height: 250px; */
+            width: 95%;
             margin: auto;
             align-items: center;
             text-align: center;
-            /* border: none; */
             position: relative;
+            font-size: 14px;
             left: 2%;
+            cursor: pointer;
+        }
 
+        #buttons_all {
+            width: 90%;
+            margin-left: 50px;
         }
 
         #buttons>button {
             width: 10%;
             height: 40px;
-            font-size: 12px;
+            font-size: 14px;
             margin: 2%;
             border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
         }
 
-        #gre {
-            background-color: rgb(43, 182, 115);
+        #buttons>button:hover {
+            background-color: #04BE5A;
             color: white;
         }
 
@@ -135,14 +134,15 @@
             left: 5%;
         }
 
+        #page {
+            margin-left: 15%;
+            margin-top: 10px;
+        }
+
         #main_grid {
             margin: auto;
-            /* border: solid red 1px; */
             width: 78%;
-
             margin-top: 20px;
-
-
         }
 
         #main_grid>div {
@@ -153,26 +153,20 @@
             width: 90%;
             justify-content: center;
             align-items: center;
-
         }
 
         #main_grid>div>div>h3 {
-            /* text-align: center; */
             font-family: 'Roboto', Arial, Helvetica, sans-serif;
             font-size: 18px;
             color: rgb(68, 68, 68);
-
             margin-top: 8px;
             text-align: center;
 
 
         }
-
         #main_grid>div>div>img {
-
             width: 100%;
             border-radius: 8px 8px 0px 0px;
-
         }
 
         #advertise {
@@ -181,26 +175,15 @@
             position: relative;
             top: 15px;
             padding-bottom: 10px;
-
         }
 
         #advertise>img {
             width: 100%;
-
         }
 
         #sec_grid {
-
-
             margin: auto;
-            /* border: solid red 1px; */
             width: 90%;
-            /* display: grid; */
-
-            /* grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
-    row-gap: 20px;
-    column-gap: 20px; */
             margin-top: 20px;
         }
 
@@ -214,21 +197,16 @@
             align-items: center;
 
         }
-
-
         #sec_grid>div>div>h3 {
             font-size: 20px;
             font-family: 'Roboto', Arial, Helvetica, sans-serif;
             text-align: center;
             margin-top: 8px;
-
         }
 
         #sec_grid>div>div>img {
-
             width: 100%;
             border-radius: 8px 8px 0px 0px;
-
         }
 
         .main_box {
@@ -237,7 +215,20 @@
             border-radius: 8px 8px 0px 0px;
 
         }
+
+        #kau_footer1 {
+            margin-top: 40px;
+        }
+
+        .next-btn {
+            position: relative;
+            bottom: 17px;
+            left: 110px;
+        }
     </style>
+
+    <div id="navbar"></div>
+    <div id="navbar21"></div>
 
     <div id="main">
 
@@ -272,17 +263,12 @@
         </div>
 
         <div id="buttons_all">
-
-
             <div id="buttons">
-
                 <button id="gre">All categories</button>
                 <button onclick="myFunction()">Appetizer</button>
                 <button onclick="Bever()">Beverages</button>
                 <button onclick="myAppe()">Appetizer</button>
-
                 <button onclick="mybreak">Breakfast</button>
-
                 <button>Breads</button>
                 <br>
                 <button>Condiments</button>
@@ -291,41 +277,27 @@
                 <button>Main Dishes</button>
                 <button>Salads</button>
                 <button>Sides</button>
-
             </div>
         </div>
-        <div id="pages">
-            <table border="0" width="100%" style="padding:10px 20px 10px 20px" ; cellspacing="0"></table>
-
-            <tbody>
-                <tr>
-                    <td width="800">
-                        <font style="font-size: 14px; color:#555555">Page:</font>
-                        <!-- "&nbsp;" -->
-                        <span id="page_tabs">1</span>
-                        <span id="page1" onclick="">
-                            <a href="https://www.kindmeal.my/recipes-2.htm">2</a></span>
-
-                        <span id="page3" onclick="goURL('https://www.kindmeal.my/recipes-3.htm')"></span>
-
-                        <a href="https://www.kindmeal.my/recipes-3.htm">3</a>
-
-
-                        <span id="page4" onclick="goURL('https://www.kindmeal.my/recipes-3.htm')"></span>
-
-                        <a href="https://www.kindmeal.my/recipes-4.htm">4</a>
-
-                        <span id="page5" onclick="goURL('https://www.kindmeal.my/recipes-3.htm')"></span>
-
-                        <a href="https://www.kindmeal.my/recipes-5.htm">5</a>
-
-                        <span id="page4" onclick="goURL('https://www.kindmeal.my/recipes-3.htm')"></span>
-
-                        <a href="https://www.kindmeal.my/recipes-5.htm">6</a>
-
-                    </td>
-                </tr>
-            </tbody>
+        <div id="page">
+            <div>
+                <span style="padding-left: 10px;color: rgb(60, 59, 59);">Page :</span>
+                <span style="color: rgb(94, 93, 93);margin-left: 10px;cursor: pointer;">1</span>
+                <span style="color: rgb(17, 87, 217);margin-left: 10px;cursor: pointer;">2</span>
+                <span style="color: rgb(17, 87, 217);margin-left: 10px;cursor: pointer;">3</span>
+                <span style="color: rgb(17, 87, 217);margin-left: 10px;cursor: pointer;">4</span>
+                <span style="color: rgb(17, 87, 217);margin-left: 10px;cursor: pointer;">5</span>
+                <span style="color: rgb(17, 87, 217);margin-left: 10px;cursor: pointer;">6</span>
+                <span style="color: rgb(17, 87, 217);margin-left: 10px;cursor: pointer;">7</span>
+                <span style="color: rgb(17, 87, 217);margin-left: 10px;cursor: pointer;">8</span>
+                <span style="color: rgb(17, 87, 217);margin-left: 10px;cursor: pointer;">9</span>
+                <span style="color: rgb(17, 87, 217);margin-left: 10px;cursor: pointer;">10</span>
+                <span style="color: rgb(17, 87, 217);margin-left: 10px;">...</span>
+                <span style="color: rgb(17, 87, 217);margin-left: 10px;cursor: pointer;">14</span>
+                <button class="next-btn"
+                    style="margin-left: 68%;height: 25px;width: 70px;border: none;background-color: rgb(232, 223, 223);border-radius: 5px;color: #373738;cursor: pointer;">Next
+                    >></button>
+            </div>
         </div>
     </div>
 
@@ -405,6 +377,28 @@
         </div>
     </div>
 
+    <div id="kau_footer1"></div>
+    <div id="kau_footer2"></div>
+
 </body>
 
 </html>
+
+<script type="module">
+    import { navbar, navbar1 } from './components/navbar.js';
+
+    let cont1 = document.querySelector('#navbar');
+    let cont2 = document.querySelector('#navbar21');
+
+    cont1.innerHTML = navbar();
+    cont2.innerHTML = navbar1();
+
+    //footer
+    import { footer1, footer2 } from './components/footer.js';
+
+    let foot1 = document.querySelector('#kau_footer1');
+    let foot2 = document.querySelector('#kau_footer2');
+
+    foot1.innerHTML = footer1();
+    foot2.innerHTML = footer2();
+</script>

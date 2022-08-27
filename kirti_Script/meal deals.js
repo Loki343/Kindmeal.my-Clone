@@ -85,7 +85,7 @@ let foods =[
 },
 {
     name:"Chinese",
-    image:"https://cdn-almjc.nitrocdn.com/aZYyrACOqPKwqacflNAAVPArFRYGkpZe/assets/static/optimized/rev-76f8472/wp-content/uploads/2020/02/46d82e1a0b0100936591de3958f3408d.Chinese-food.jpg",
+    image:"https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F2997%2Ftrend20201119134018.jpg",
     Restaurant_name:"The black cafe",
     adress:"Banglore",
     state:"Karnatak"
@@ -259,6 +259,9 @@ function append(data){
     container.innerHTML=null
   data.forEach(function(el){
       let div=document.createElement("div")
+      div.addEventListener("click",function(){
+        window.location.href = "recipe.html"
+      })
 
       let name=document.createElement("h2")
       name.innerText=el.name

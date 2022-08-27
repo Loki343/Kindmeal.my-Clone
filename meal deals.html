@@ -5,14 +5,10 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Meal Deal Page</title>
    <link rel="stylesheet" href="components/navbar.css">
    <link rel="stylesheet" href="components/footer.css">
    <link rel="stylesheet" href="kau_styles/body.css">
-
-
-
-
 
    <style>
       * {
@@ -20,7 +16,6 @@
          padding: opx;
          box-sizing: border-box;
          font-family: 'Roboto', Arial, Helvetica, sans-serif;
-
       }
 
       #btn1 {
@@ -32,6 +27,7 @@
          margin-left: 100px;
          border: none;
          font-size: 17px;
+         cursor: pointer;
       }
 
       #btn2 {
@@ -44,6 +40,7 @@
          width: 180px;
          border: none;
          font-size: 17px;
+         cursor: pointer;
       }
 
       #functionality>select {
@@ -66,9 +63,9 @@
       #img1 {
 
          /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
-         margin-left: 100px;
-         width: 80%;
-         margin-left: 10%;
+         margin-left: 150px;
+         width: 60%;
+         margin-left: 20%;
          margin-right: 10%;
          display: block;
          background-color: #F0F0F0;
@@ -83,13 +80,13 @@
          margin-bottom: 40px;
          height: 280px;
          padding-top: 15px;
-         
+
 
 
       }
 
       #heading>h2 {
-         margin-left: 170px;
+         margin-left: 190px;
          /* font-family: ; */
          font-weight: lighter;
          font-size: 30px;
@@ -99,7 +96,7 @@
       }
 
       #heading>p {
-         margin-left: 170px;
+         margin-left: 190px;
          font-size: 15px;
          line-height: 30px;
 
@@ -134,7 +131,8 @@
          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
          border-radius: 15px;
          padding: 15px 0px 15px 0px;
-      
+         cursor: pointer;
+
          /* padding: 15px; */
 
       }
@@ -242,12 +240,13 @@
             <option value="UP">Uttar Pradesh</option>
          </select>
          <button id="btn1">Search Details</button>
-         <button id="btn2">Browse Restaurants</button>
+         <button id="btn2"><a style="text-decoration:none;color:white" href="directory.html">Browse
+               Restaurants</a></button>
       </div>
    </div>
 
    <div>
-      <img  id="img1" src="https://www.kindmeal.my/images/banner_directory.jpg">
+      <img id="img1" src="https://www.kindmeal.my/images/banner_directory.jpg">
    </div>
 
 
@@ -260,16 +259,17 @@
    </button>
 
    <div id="image2">
-      <img id="img2" style="width: 68%;position: relative ;left: 50px;" src="https://www.kindmeal.my/images/how_kindmeal_works.png">
+      <img id="img2" style="width: 68%;position: relative ;left: 50px;"
+         src="https://www.kindmeal.my/images/how_kindmeal_works.png">
    </div>
 
-   <div style="padding-top:10px;"id="kau_footer1"></div>
+   <div style="padding-top:10px;" id="kau_footer1"></div>
    <div id="kau_footer2"></div>
 
 </body>
 
 </html>
-<script src="meal deals.js"></script>
+<script src="./kirti_Script/meal deals.js"></script>
 <script type="module">
    import { navbar, navbar1 } from './components/navbar.js';
 

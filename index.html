@@ -12,6 +12,7 @@
             padding: 0px;
             font-family: 'Roboto', Arial, Helvetica, sans-serif;
         }
+
     </style>
     <link rel="stylesheet" href="components/navbar.css">
     <link rel="stylesheet" href="kau_styles/body.css">
@@ -19,7 +20,7 @@
 </head>
 
 <body>
-    <h1 id="name343"></h1>
+    <!-- <h1 id="name343"></h1> -->
     <div id="navbar"></div>
     <div id="navbar21"></div>
     <div id="kau_background">
@@ -370,9 +371,9 @@
     foot2.innerHTML = footer2();
 
     let loginData = JSON.parse( localStorage.getItem('logdata'))||[];
-    document.querySelector('#loginsignup').innerHTML = `<img src = ''>
-		<h3>${loginData[0].name}</h3>
-		<img src = ''>` ;
+    document.querySelector('#loginsignup').innerHTML = `<img src = 'https://www.kindmeal.my/images/icon_notice.png'>
+		<p style = 'color: rgb(125, 123, 123);'>${loginData[0].name}</p>
+		<img src = 'https://www.kindmeal.my/images/no_photo_header.png'>`;
 </script>
 
 <script>

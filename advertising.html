@@ -91,4 +91,9 @@
   
   foot1.innerHTML = footer1();
   foot2.innerHTML = footer2();
+
+  let loginData = JSON.parse( localStorage.getItem('logdata'))||[];
+    document.querySelector('#loginsignup').innerHTML = `<img src = 'https://www.kindmeal.my/images/icon_notice.png'>
+		<p style = 'color: rgb(125, 123, 123);'>${loginData[0].name}</p>
+		<img src = 'https://www.kindmeal.my/images/no_photo_header.png'>`;
   </script>

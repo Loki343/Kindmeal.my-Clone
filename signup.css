@@ -5,17 +5,19 @@
 }
 #box{
     display: flex;
-    width: 100%;
+    width: 80%;
     height: 100%;
     padding: 10px;
+    margin: auto;
+    /* border: 1px solid red; */
 }
 #side{
-    margin-left: 130px;
+    /* margin-left: 130px; */
     margin-top: 30px;
     
 }
 #side1{
-    border: 1px solid gray;
+    border: 1px solid lightgray;
     width: 60%;
     height: 190px;
     padding: 20px;
@@ -80,10 +82,11 @@
 
 #form{
     margin-top: 10px;
-    width: 45%;
+    width: 60%;
     padding: 15px;
     color: gray;
-    }
+   
+}
 #form h1{
     color: black;
     margin-bottom: 13px;
@@ -110,43 +113,47 @@ input{
     margin-top: 10px;
     margin-left: 20px;
     width: 350px;
-    height: 40px;
+    height: 20px;
     margin-bottom: 15px;
     outline: none;
     font-size: 14px;
+    padding: 10px;
 }
-#name{
-    margin-left: 50px;
+.input_box{
+    position: relative;
+    left: 60px;
 }
-#email{
-    margin-left: 88px;
+#email2{
+    margin-left: 58px;
+    border: 1px solid gray;
+   
 }
-#email1{
-    margin-left: 24px;
+#Re_email{
+    margin-left: -11px;
 }
 #password{
-    margin-left: 62px;
+    margin-left: 31px;
 }
 #username{
-    margin-left: 60px;
+    margin-left: 26px;
 }
 #date{
-    margin-left: 62px;
+    margin-left: 26px;
 }
 #country{
-    margin-left: 72px;
+    margin-left: 37px;
     width: 150px;
     height: 30px;
     margin-bottom: 15px;
 }
 #state{
-    margin-left:91px;
+    margin-left:55px;
     width: 150px;
     height: 30px;
     margin-bottom: 15px;
 }
 #gender{
-    margin-left:75px;
+    margin-left:38px;
     width: 150px;
     height: 30px; 
 }

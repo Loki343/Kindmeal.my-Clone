@@ -7,7 +7,8 @@
     <title>Signup</title>
     <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="components/navbar.css">
-  <!-- <link rel="stylesheet" href="kau_styles/body.css"> -->
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="kau_styles/body.css">
   <style>
     *{
       margin: 0;
@@ -16,7 +17,8 @@
   </style>
 </head>
 <body>
-    <div id="kau_navbar"></div>
+  <div id="navbar"></div>
+  <div id="navbar21"></div>
     <div id="box">
         <div id="side">
             <div id="side1">
@@ -55,14 +57,14 @@
                 <h1>Personal Profile</h1>
                 <p>First, we setup your personal profile, then proceed to configure your shop promotions.</p>
 
-                        <label for="">Your Name </label><input type="text" id="name" placeholder="Enter your Name"><br>
-                        <label for="">Email </label><input type="email" id="email" placeholder="Enter email name"><br>
-                        <label for="">Re-Enter Email:</label><input type="email" id="Re_email" placeholder="Your Email must be correct"><br>
-                        <label for="">Password</label><input type="password" id="password" placeholder="Enter Password"><br>
-                        <label for="">Username</label><input type="text" id="username" placeholder="Enter Username"><br>
-                        <label for="">Birth Date</label><input type="date" id="date"><br>
-                        <label for="">Country</label>
-                        <select id="country">
+                        <label for="" class="label">Your Name </label><input type="text" class="input_box" id="name" placeholder="Enter your Name"><br>
+                        <label for="" class="label">Email </label><input type="email" class="input_box" id="email2" placeholder="Enter email name"><br>
+                        <label for="" class="label" >Re-Enter Email:</label><input type="email" class="input_box" id="Re_email" placeholder="Your Email must be correct"><br>
+                        <label for="" class="label" >Password</label><input type="password" class="input_box" id="password" placeholder="Enter Password"><br>
+                        <label for="" class="label">Username</label><input type="text" class="input_box" id="username" placeholder="Enter Username"><br>
+                        <label for="" class="label" >Birth Date</label><input type="date" class="input_box" id="date"><br>
+                        <label for="" class="label" >Country</label>
+                        <select id="country" class="input_box" >
                             <option value="">Your Country</option>
                             <option value="">India</option>
                             <option value="">Pakistan</option>
@@ -75,8 +77,8 @@
                             <option value="">Germany</option>
                             <option value="">France</option>
                         </select><br>
-                        <label for="">State</label>
-                        <select id="state">
+                        <label for="" class="label" >State</label>
+                        <select id="state" class="input_box">
                             <option value="">state</option>
                             <option value="">Andhra Pradesh</option>
                             <option value="">Arunachal Pradesh</option>
@@ -106,8 +108,8 @@
                             <option value="">Uttarakhand</option>
                             <option value="">West Bengal</option>
                         </select><br>
-                        <label for="">Gender</label>
-                        <select id="gender">
+                        <label for="" class="label" >Gender</label>
+                        <select id="gender" class="input_box" >
                             <option value="">Gender</option>
                             <option value="">Male</option>
                             <option value="">Female</option>
@@ -122,16 +124,34 @@
     <div id="img_last">
       <img src="https://www.kindmeal.my/images/how_kindmeal_works.png" alt="Error">
     </div>
-    
+
+    <div id="kau_footer1"></div>
+    <div id="kau_footer2"></div>
   </body>
 </html>
-         
+       
+<script type="module">
+  import { navbar, navbar1 } from './components/navbar.js';
+
+  let cont1 = document.querySelector('#navbar');
+  let cont2 = document.querySelector('#navbar21');
+
+  cont1.innerHTML = navbar();
+  cont2.innerHTML = navbar1();
+
+  //footer
+  import { footer1, footer2 } from './components/footer.js';
+
+  let foot1 = document.querySelector('#kau_footer1');
+  let foot2 = document.querySelector('#kau_footer2');
+
+  foot1.innerHTML = footer1();
+  foot2.innerHTML = footer2();
+</script>
             
 
 <script type="module">
-    let container = document.querySelector('#kau_navbar');
-    import { navbar } from './components/navbar.js'
-    container.innerHTML = navbar();
+
 
 let userArr = JSON.parse(localStorage.getItem("signup")) || [];
 let Signup = (e) => {
@@ -139,7 +159,7 @@ let Signup = (e) => {
   
   let name = document.getElementById("name").value;
 
-  let email = document.getElementById("email").value;
+  let email = document.getElementById("email2").value;
 
   let pass = document.getElementById("password").value;
   

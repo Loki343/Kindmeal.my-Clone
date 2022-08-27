@@ -404,25 +404,23 @@ else if(selected=="UP"){
 
 
 
-let category=document.getElementById("categories");
-category.addEventListener("change",foodFilter)
+   let category=document.getElementById("categories");
+   category.addEventListener("change",foodFilter)
 
-function foodFilter(event){
+  function foodFilter(el){
   let selected=category.value
 
-  if(selected=="PA"){
-    let filtered=data.filter(function(el){
+    if(selected=="PA"){
+    let filtered=foods.filter(function(el){
 
-      return el.category=="Pasta"
-      
-
+      return el.name=="Pasta"
     })
     append(filtered)
 
-  }else if(selected=="BR"){
-    let filtered=data.filter(function(el){
+   }else if(selected=="BR"){
+    let filtered=foods.filter(function(el){
 
-      return el.category=="Burger"
+      return el.name=="Burger"
       
 
     })
@@ -430,9 +428,9 @@ function foodFilter(event){
 
   }
   else if(selected=="CH"){
-    let filtered=data.filter(function(el){
+    let filtered=foods.filter(function(el){
 
-      return el.category=="Chinese"
+      return el.name=="Chinese"
       
 
     })
@@ -441,9 +439,9 @@ function foodFilter(event){
   }
 
   else if(selected=="BF"){
-    let filtered=data.filter(function(el){
+    let filtered=foods.filter(function(el){
 
-      return el.category=="Breakfast"
+      return el.name=="Breakfast"
       
 
     })
@@ -452,9 +450,9 @@ function foodFilter(event){
   }
 
   else if(selected=="SL"){
-    let filtered=data.filter(function(el){
+    let filtered=foods.filter(function(el){
 
-      return el.category=="Salad"
+      return el.name=="Salad"
       
 
     })

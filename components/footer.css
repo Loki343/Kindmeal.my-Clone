@@ -1,0 +1,35 @@
+#kau_footer1 {
+    display: flex;
+    justify-content: center;
+    background-color:#2bb673;
+    height: 350px;
+}
+#kau_footer2 {
+    display: flex;
+    justify-content: center;
+    background-color:#2bb673;
+    height: 40px;
+}
+#kau_footer2>div>div>p{
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    line-height: 0px;
+}
+.kau_footerfourdiv{
+    width: 25%;
+    height: 350px;
+    /* border: 1px solid black; */
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: white;
+}
+.kau_footerfourdiv>p{
+    line-height: 12px;
+    font-size: 13px;
+    margin-left: 12%;
+}
+.kau_footerfourdiv>h4{
+    margin-top: 15px;
+    margin-left: 12%;
+}

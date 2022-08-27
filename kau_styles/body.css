@@ -1,37 +1,43 @@
 /* slideshow */
-#kau_slide{
+#kau_slide {
     display: flex;
     justify-content: center;
 }
-#kau_slide1{
-    width: 39%;
-    height: 370px;
+
+#kau_slide1 {
+    width: 49%;
+    height: 400px;
 }
-#kau_slide2{
-    width: 19%;
-    height: 370px;
+
+#kau_slide2 {
+    width: 26%;
+    height: 400px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#kau_food{
+
+#kau_food {
     width: 100%;
     height: 100%;
 }
-#kau_banner{
+
+#kau_banner {
     width: 100%;
     height: 100%;
 }
+
 /* underslide */
-#kau_underSlide{
+#kau_underSlide {
     display: flex;
     justify-content: center;
 }
-#kau_underSlide>div{
-    height: 120px;
-    width: 58%;
+
+#kau_underSlide>div {
+    height: 140px;
+    width: 75%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: flex;
 }
-.kau_slideimage{
+.kau_slideimage {
     width: 80%;
     height: 70%;
     padding: 20px;
@@ -39,26 +45,30 @@
 }
 
 /* newsvideo */
-#kau_background{
-    background-color: #ececec ;
+#kau_background {
+    background-color: #ececec;
     border: 1px solid transparent;
 }
-#kau_newsvideo{
+
+#kau_newsvideo {
     display: flex;
     justify-content: center;
 }
-#kau_newsvideo>div{
-    width: 58%;
+
+#kau_newsvideo>div {
+    width: 75%;
     border: 1px solid transparent;
     margin-top: 30px;
-    height: 230px;
+    /* height: 230px; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#kau_headline{
+
+#kau_headline {
     display: flex;
     justify-content: space-between;
 }
-#kau_headline>a{
+
+#kau_headline>a {
     font-size: 25px;
     color: rgb(58, 57, 57);
     text-decoration: none;
@@ -66,33 +76,148 @@
     padding: 10px;
     margin-left: 10px;
 }
-#kau_headline>div>a{
+
+#kau_headline>div>a {
     font-size: 20px;
     color: rgb(27, 109, 224);
     text-decoration: none;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     padding: 8px;
 }
-#kau_headline>div{
+
+#kau_headline>div {
     margin-top: 15px;
 }
-#kau_image{
+
+#kau_image {
+    height: auto;
     display: flex;
-    justify-content: center;
 }
-#c{
-    width: 90%;
-    height: 60%;
-    margin-left: 5%;
-    border-radius: 5px;
+#kau_image>div{
+    border: 1px solid black transparent;
+    width: 20%;
+    height: 250px;
 }
-#kau_line1{
-    text-align: center;
-    margin-bottom: -5px;
-}
-#kau_line1>a{
-    font-size: 13px;
-    color: gray;
-    text-decoration: none;
+.everyimg{
+    width: 100%;
+    height: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
 }
 
+/* meetfree */
+#meetfree {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+#meetfree1 {
+    border: 1px solid transparent;
+    width: 75%;
+    height: auto;
+}
+
+#kau_head {
+    font-size: 35px;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: #666666;
+}
+
+#meetfree1>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#meetfree1>div>h4 {
+    color: #999;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#meetfree1>div>img {
+    width: 30%;
+    margin-left: 20px;
+}
+
+#kau_smallhead {
+    font-size: 25px;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: #666666;
+    margin-top: 35px;
+}
+
+/* foursection */
+#foursection {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+#foursection1 {
+    border: 1px solid transparent;
+    width: 65%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+}
+
+#foursection1>div {
+    width: auto;
+    height: auto;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+#foursection1>div>h3,
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#foursection1>div>img {
+    height: 100px;
+    width: 170px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+/* button */
+#kau_btn {
+    background-color: red;
+    border: 0px;
+    border-radius: 10px;
+    padding: 0 30px;
+    margin-top: 30px;
+}
+
+#kau_btn:hover {
+    cursor: pointer;
+    background-color: rgb(177, 4, 4);
+}
+
+#kau_btn>p {
+    color: white;
+}
+
+#kau_btn>p:nth-child(1) {
+    font-size: 50px;
+}
+
+#kau_btn>p:nth-child(2) {
+    font-size: 20px;
+}
+
+#kau_featured {
+    color: #999;
+    margin-top: 50px;
+    font-size: 30px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}

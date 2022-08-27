@@ -15,11 +15,13 @@
   <link rel="stylesheet" href="kau_styles/body.css">
 </head>
 <body>
-    <div id="kau_navbar"></div>
+    <!-- <div id="kau_navbar"></div> -->
+    <div id="navbar"></div>
+    <div id="navbar21"></div>
     <input type="checkbox" id="show">
     
     <div id="box">
-        <label for="show" class="close-btn"><i class="fa-solid fa-xmark"></i></label>
+        <label for="show" class="close-btn"><i onclick="gotoindex()" class="fa-solid fa-xmark"></i></label>
         <div id="box_first">
             <img src="https://www.kindmeal.my/images/logo-kindmeal.png" alt="Error">
             <h2>Join KindMeal For FREE Now</h2>
@@ -49,7 +51,18 @@
 </html>
 
 <script type="module">
-    let container = document.querySelector('#kau_navbar');
-    import { navbar } from './components/navbar.js'
-    container.innerHTML = navbar();
+  import { navbar, navbar1 } from './components/navbar.js';
+
+let cont1 = document.querySelector('#navbar');
+let cont2 = document.querySelector('#navbar21');
+
+cont1.innerHTML = navbar();
+cont2.innerHTML = navbar1();
+
+</script>
+<script>
+    
+function gotoindex(){
+    window.location.href="index.html";
+   }
 </script>

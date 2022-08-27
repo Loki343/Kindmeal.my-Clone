@@ -17,22 +17,22 @@
 }
 
 #logo{
-    width: 120%;
-    height: 100px;
+    width: 110%;
+    /* height: 100px; */
     margin-left: -80px;
     
 }
 
 .eachlink {
-    width: 22%;
-    padding-left: 20px;
+    width: 18%;
+    padding-left: 10px;
     box-sizing: border-box;
 }
 
-#login>a,
+#kau_login,
 #facebook>a,
 #email>a,
-#signup>a {
+#kau_signup{
     text-decoration: none;
 }
 
@@ -40,21 +40,21 @@
     background-color: #35619f;
     border: 0px;
     border-radius: 3px;
-    height: 30px;
+    height: 26px;
 }
 
 #facebook>a {
     color: white;
     padding: 10px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 #email {
     background-color: #666;
     border: 0px;
     border-radius: 3px;
-    height: 30px;
+    height: 26px;
 }
 
 #loginsignup {
@@ -66,15 +66,15 @@
     color: white;
     padding: 10px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 14px;
 }
 
-#login>a {
+#kau_login {
     color: #575150;
     font-size: 14px;
 }
 
-#signup>a {
+#kau_signup {
     color: #575150;
     font-size: 14px;
     margin-right: 50px;

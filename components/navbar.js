@@ -1,5 +1,5 @@
-function navbar(){
-    return `<div id="navbar1">
+function navbar() {
+  return `<div id="navbar1">
     <a href=""><img id="logo"
             src="https://www.kindmeal.my/images/logo-kindmeal.png" alt=""></a>
     <div>
@@ -10,15 +10,15 @@ function navbar(){
                 alt=""></a>
     </div>
     <div id="loginsignup">
-        <p id="login"><a href="">Login</a></p>
+    <label for="show"><a href="login.html" id="kau_login">Login</a></label>
         <button id="facebook"><a href="">Facebook</a></button>
         <button id="email"><a href="">Email</a></button>
-        <p id="signup"><a href="">Sign Up</a></p>
+        <label for="show"><a href="main.html" id="kau_signup">Sign up</a></label>
     </div>
 </div>`;
 }
-function navbar1(){
-    return `<div id="navbar2">
+function navbar1() {
+  return `<div id="navbar2">
     <a href="index.html"><p>Home</p></a>
     <a href="meal deals.html"><p>Meal Deals</p></a>
     <a href=""><p>KindMoments</p></a>
@@ -30,4 +30,4 @@ function navbar1(){
 </div>`;
 }
 
-export {navbar,navbar1}
+export { navbar, navbar1 };

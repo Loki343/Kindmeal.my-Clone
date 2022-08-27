@@ -43,6 +43,9 @@ input{
     border: 1px solid gray;
     padding: 10px;
 }
+#email1{
+    background-color: white;
+}
 #password{
     margin-bottom: 30px;
 }

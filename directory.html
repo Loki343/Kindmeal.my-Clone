@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./kirti_Style/general.css" />
+    
+    <link rel="stylesheet" href="components/navbar.css">
     <link rel="stylesheet" href="components/footer.css">
     <title>Directory Page</title>
     <style>
@@ -232,12 +234,15 @@
      #kau_footer2{
       height: 60px;
      }
+     #navbar2{
+      margin-top: 20px;
+     }
     </style>
   </head>
 
   <body>
-    <nav id="navbar"></nav>
-    <menu id="menubar"></menu>
+    <div id="navbar"></div>
+    <div id="navbar21"></div>
     <div id="veg-res-content">
       <h1>Vegetarian Restaurants In Malaysia</h1>
       <p class="veg-details">
@@ -483,6 +488,14 @@
 <script src="./kirti_Script/directory.js" type="module"></script>
 
 <script type="module">
+  import { navbar, navbar1 } from './components/navbar.js';
+
+let cont1 = document.querySelector('#navbar');
+let cont2 = document.querySelector('#navbar21');
+
+cont1.innerHTML = navbar();
+cont2.innerHTML = navbar1();
+
   import { footer1, footer2 } from './components/footer.js';
 
 let foot1 = document.querySelector('#kau_footer1');
@@ -495,10 +508,10 @@ console.log(localStorage.getItem('login'));
     let loginxxx = localStorage.getItem('login');
     if(loginxxx==='true'){
         let loginData = JSON.parse( localStorage.getItem('logdata'))||[];
-    document.querySelector('#loginsignup').innerHTML = `<img src = 'https://www.kindmeal.my/images/icon_notice.png'>
+    document.querySelector('#loginsignup').innerHTML = `<img style="height:10%;margin-top:40px;"src = 'https://www.kindmeal.my/images/icon_notice.png'>
 		<p style = 'color: rgb(125, 123, 123);'>${loginData[0].name}</p>
-		<img src = 'https://www.kindmeal.my/images/no_photo_header.png'>
-        <button style='color:;background-color:red;border:0px;padding:10px;border-radius:5px;cursor:pointer;font-size:15px' id='logout'>Log Out</button>`;
+		<img style="height:10%;margin-top:35px;" src = 'https://www.kindmeal.my/images/no_photo_header.png'>
+        <button style='color:white;background-color:red;border:0px;padding:10px;border-radius:5px;cursor:pointer;font-size:12px;height:9%;margin-top:35px;' id='logout'>Log Out</button>`;
     }else if(loginxxx==='false'){
         
     }
@@ -509,5 +522,7 @@ console.log(localStorage.getItem('login'));
         window.location.reload();
     })
 </script>
+
+
 
 

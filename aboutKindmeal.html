@@ -7,6 +7,8 @@
     <title>About KindMeal Page</title>
     <link rel="stylesheet" href="./kirti_Style/general.css" />
     <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="components/navbar.css">
+
     <style>
       #content-section {
         height: auto;
@@ -144,12 +146,17 @@
         .banner {
           width: 90vh;
         }
+        
       }
+      #navbar2{
+          position: relative;
+          top: 20px;
+        }
     </style>
   </head>
   <body>
-    <nav id="navbar"></nav>
-    <menu id="menubar"></menu>
+    <div id="navbar"></div>
+    <div id="navbar21"></div>
 
     <div id="main-container">
       <div id="sidebar-section"></div>
@@ -272,29 +279,43 @@
 
 
 <script type="module">
-  import { footer1, footer2 } from './components/footer.js';
 
-let foot1 = document.querySelector('#kau_footer1');
-let foot2 = document.querySelector('#kau_footer2');
-
-foot1.innerHTML = footer1();
-foot2.innerHTML = footer2();
-
-console.log(localStorage.getItem('login'));
-    let loginxxx = localStorage.getItem('login');
-    if(loginxxx==='true'){
-        let loginData = JSON.parse( localStorage.getItem('logdata'))||[];
-    document.querySelector('#loginsignup').innerHTML = `<img src = 'https://www.kindmeal.my/images/icon_notice.png'>
-		<p style = 'color: rgb(125, 123, 123);'>${loginData[0].name}</p>
-		<img src = 'https://www.kindmeal.my/images/no_photo_header.png'>
-        <button style='color:;background-color:red;border:0px;padding:10px;border-radius:5px;cursor:pointer;font-size:15px' id='logout'>Log Out</button>`;
-    }else if(loginxxx==='false'){
-        
-    }
-
-
-    document.querySelector('#logout').addEventListener('click',function(){
-        localStorage.setItem('login',false);
-        window.location.reload();
-    })
-</script>
+  import sidebar from "./kirti_components/sidebar.js";
+  
+  document.getElementById("sidebar-section").innerHTML = sidebar()
+  
+  
+  import { navbar, navbar1 } from './components/navbar.js';
+    
+    let cont1 = document.querySelector('#navbar');
+    let cont2 = document.querySelector('#navbar21');
+    
+    cont1.innerHTML = navbar();
+    cont2.innerHTML = navbar1();
+    
+      import { footer1, footer2 } from './components/footer.js';
+    
+    let foot1 = document.querySelector('#kau_footer1');
+    let foot2 = document.querySelector('#kau_footer2');
+    
+    foot1.innerHTML = footer1();
+    foot2.innerHTML = footer2();
+    
+    console.log(localStorage.getItem('login'));
+        let loginxxx = localStorage.getItem('login');
+        if(loginxxx==='true'){
+            let loginData = JSON.parse( localStorage.getItem('logdata'))||[];
+        document.querySelector('#loginsignup').innerHTML = `<img style="height:10%;margin-top:40px;"src = 'https://www.kindmeal.my/images/icon_notice.png'>
+            <p style = 'color: rgb(125, 123, 123);'>${loginData[0].name}</p>
+            <img style="height:10%;margin-top:35px;" src = 'https://www.kindmeal.my/images/no_photo_header.png'>
+            <button style='color:white;background-color:red;border:0px;padding:10px;border-radius:5px;cursor:pointer;font-size:12px;height:9%;margin-top:35px;' id='logout'>Log Out</button>`;
+        }else if(loginxxx==='false'){
+            
+        }
+    
+    
+        document.querySelector('#logout').addEventListener('click',function(){
+            localStorage.setItem('login',false);
+            window.location.reload();
+        })
+    </script>

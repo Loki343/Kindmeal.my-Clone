@@ -176,7 +176,13 @@
       <script>
         document.querySelector('#button_red').addEventListener("click",function(event){
             let form = document.querySelector('#contact_form');
-        let contact_name = form.name1.value;
-           alert(`Thank you ${contact_name} \n\nWe Got Your Contact Details!`)
+            if(form.name1.value == "" || form.email1.value == ""){
+                alert("Please fill the required data")
+            }
+            else{
+                let contact_name = form.name1.value;
+                alert(`Thank you ${contact_name} \n\nWe Got Your Contact Details!`)
+            }
+        
         })
       </script>

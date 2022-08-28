@@ -81,10 +81,11 @@
 }
 
 #form{
-    margin-top: 10px;
-    width: 60%;
-    padding: 15px;
+    margin-top: 27px;
+    width: 70%;
+    padding: 20px;
     color: gray;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
    
 }
 #form h1{
@@ -101,10 +102,16 @@
 #form li a{
     color: red;
 }
+#form-second{
+    position: relative;
+    left: 120px;
+}
 #form-second h1{
+    position: relative;
+    left: 150px;
     margin-top: 60px;
     color: gray;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 #form-second p{
     margin-top: -15px;
@@ -158,20 +165,22 @@ input{
     height: 30px; 
 }
 #submit{
+    position: relative;
+    left: 130px;
     padding: 10px;
     margin-top: 40px;
     width: 30%;
     height: 50px;
     margin-left: 40px;
     border-radius: 7px;
-    border: 1px solid #f06292;
     color: white;
-    background-color:#ff4081;
+    background-color:#F53838;
     font-size: 20px;
+    border: none;
     cursor: pointer;
 }
 #submit:hover{
-    background-color:#d81b60;
+    background-color:#d41f1f;
 }
 #img_last{
     width: 100%;

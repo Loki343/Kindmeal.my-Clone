@@ -27,6 +27,9 @@
         #navbar2{
             margin-top: 20px;
         }
+        .card{
+            height: 32vh;
+        }
     </style>
 </head>
 <body>
@@ -93,5 +96,6 @@
           document.querySelector('#logout').addEventListener('click',function(){
               localStorage.setItem('login',false);
               window.location.reload();
+              alert("Logout Successful!")
           })
       </script>

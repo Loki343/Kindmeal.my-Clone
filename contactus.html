@@ -47,16 +47,16 @@
                                 <tbody>
                                     <tr>
                                         <td class="label">Name</td>
-                                        <td><input type="text" id="name" class="ww_form_text"></td>
+                                        <td><input type="text" id="name1" class="ww_form_text"></td>
                                     </tr>
 
                                     <tr>
                                         <td class="label">Email</td>
-                                        <td><input type="text" id="email" style="background-color:white ;border: 0.5px solid lightgrey; height: 40px;" class="ww_form_text" maxlength="100"></td>
+                                        <td><input type="text" id="email1" style="background-color:white ;border: 0.5px solid lightgrey; height: 40px;" class="ww_form_text" maxlength="100"></td>
                                     </tr>
                                     <tr>
                                         <td class="label">Phone<br><span class="ww_text_optional">(Optional)</span></td>
-                                        <td><input type="text" id="phone" class="ww_form_text" maxlength="50"></td>
+                                        <td><input type="text" id="phone1" class="ww_form_text" maxlength="50"></td>
                                     </tr>
                                     <tr>
                                         <td class="label">Topic</td>
@@ -129,7 +129,7 @@
 </body>
 
 </html>
-<script src="./kirti_Script/contactus.js" type="module"></script>
+<!-- <script src="./kirti_Script/contactus.js" type="module"></script> -->
 
 
 <script type="module">
@@ -166,11 +166,17 @@
           }else if(loginxxx==='false'){
               
           }
-      
-      
           document.querySelector('#logout').addEventListener('click',function(){
               localStorage.setItem('login',false);
               window.location.reload();
               alert("Logout Successful!")
           })
+      </script>
+
+      <script>
+        document.querySelector('#button_red').addEventListener("click",function(event){
+            let form = document.querySelector('#contact_form');
+        let contact_name = form.name1.value;
+           alert(`Thank you ${contact_name} \n\nWe Got Your Contact Details!`)
+        })
       </script>

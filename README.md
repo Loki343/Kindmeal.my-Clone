@@ -9,15 +9,21 @@ KindMeal is Malaysia's pioneering meat-free lifestyle platform. We provide an ef
 - Home Page
 - Navbar & Footer
 - Meal Deal Page
+
   - Filter & Sorting functionality
   - Back To Top functionality
+ 
 - Recipie Page
 - Article Page
 - Help Page
+
   - Import Export functionality
+
 - Contact Us Page
   - Data Store In Local Storage
+ 
 - Login & SigUp Page
+
   - Login Page with Authentication & Validation
   - Data Store In Local Storage
   - Signup user name displayed on Navbar 

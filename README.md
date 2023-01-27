@@ -43,7 +43,7 @@ KindMeal is Malaysia's pioneering meat-free lifestyle platform. We provide an ef
 - CSS
 - HTML
 
-## It is a Collaborative Project built by 5 developers in 5 days. 
+## Collaborative Project built by 5 developers in 5 days 
 
  * Kausik Bhaumik
  * Kirtiraj Ingale

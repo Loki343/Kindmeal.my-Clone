@@ -4,7 +4,7 @@ KindMeal is Malaysia's pioneering meat-free lifestyle platform. We provide an ef
 
 # [Vercel Deployed Link](https://arrogant-beef-5673.vercel.app/)
 
-<h3>Pages & Features:</h3>
+<h3> Pages & Features: </h3>
 
 - Home Page
 - Navbar & Footer
@@ -20,6 +20,7 @@ KindMeal is Malaysia's pioneering meat-free lifestyle platform. We provide an ef
   - Import Export functionality
 
 - Contact Us Page
+
   - Data Store In Local Storage
  
 - Login & SigUp Page
@@ -36,12 +37,14 @@ KindMeal is Malaysia's pioneering meat-free lifestyle platform. We provide an ef
  `Password:- As given while Signup`
  
 # Tech Stacks Used
+
 - Javascript
 - Bootstrap
 - CSS
 - HTML
 
 ## It is a Collaborative Project built by 5 developers in 5 days. 
+
  * Kausik Bhaumik
  * Kirtiraj Ingale
  * Nitin Potbhare

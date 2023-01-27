@@ -31,7 +31,8 @@ KindMeal is Malaysia's pioneering meat-free lifestyle platform. We provide an ef
 ## Demo Login Credentials
 
 **Use this Credentials to Login as a user.**
- `Enail ID:- As given while Signup`
+
+ `Email ID:- As given while Signup`
  `Password:- As given while Signup`
  
 # Tech Stacks Used

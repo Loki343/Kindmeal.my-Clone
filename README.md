@@ -4,7 +4,7 @@ KindMeal is Malaysia's pioneering meat-free lifestyle platform. We provide an ef
 
 # [Vercel Deployed Link](https://arrogant-beef-5673.vercel.app/)
 
-<h3> Pages & Features: </h3>
+## Pages & Features:
 
 - Home Page
 - Navbar & Footer

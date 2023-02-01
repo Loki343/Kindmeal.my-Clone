@@ -1,11 +1,10 @@
 <h1>KindMeal.my - Clone </h1>
 
-
 KindMeal is Malaysia's pioneering meat-free lifestyle platform. We provide an effective platform to promote compassionate dining in a fun and effective way.
 
 # [Vercel Deployed Link](https://arrogant-beef-5673.vercel.app/)
 
-## Pages & Features:
+## Pages & Features:-
 
 - Home Page
 - Navbar & Footer

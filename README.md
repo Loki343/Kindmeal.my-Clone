@@ -1,8 +1,9 @@
-<h1>KindMeal.my - Clone </h1>
+<h1>KindMeal.my - Clone</h1>
 
 KindMeal is Malaysia's pioneering meat-free lifestyle website where they provide an effective platform to promote compassionate dining in a fun and effective way.
 
 ## [Vercel Deployed Link](https://arrogant-beef-5673.vercel.app/)
+
 
 ## Pages & Features:-
 

@@ -37,7 +37,7 @@ KindMeal is Malaysia's pioneering meat-free lifestyle website where they provide
  `Email ID:- As given while Signup`
  `Password:- As given while Signup`
  
-# Tech Stacks Used
+## Tech Stacks Used
 
 - Javascript
 - Bootstrap

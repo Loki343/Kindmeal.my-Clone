@@ -87,4 +87,3 @@ KindMeal is Malaysia's pioneering meat-free lifestyle website, where they provid
 ![Contactpage](https://user-images.githubusercontent.com/101358022/215025847-f1184331-82ab-4e1f-ba31-124c3ae40728.png)
 
 
-
